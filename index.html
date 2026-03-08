@@ -928,8 +928,8 @@ body {
     <div class="hero-right">
       <div class="fee-widget">
         <div class="fee-label">Student Registration Fee</div>
-        <div class="fee-amount">₦45,000</div>
-        <div class="fee-desc">Per student · All levels (100–Msc)</div>
+        <div class="fee-amount">₦50</div>
+        <div class="fee-desc">Per student · All levels (200–500)</div>
         <button class="btn-secure" onclick="showPage('register')">
           Secure Your Seat
           <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1057,7 +1057,7 @@ body {
           </div>
           <div class="ric-item">
             <svg width="16" height="16" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-            Open to 100–Msc Level Architecture students
+            Open to 200–500 Level Architecture students
           </div>
         </div>
       </div>
@@ -1100,7 +1100,7 @@ body {
               <div class="field-label">Level <span class="required">*</span></div>
               <select class="field-input field-select" id="f-level">
                 <option value="">Select Level</option>
-                <option>100</option><option>200</option><option>300</option><option>400</option><option>Msc</option>
+                <option>100</option><option>200</option><option>300</option><option>400</option><option>500</option>
               </select>
             </div>
           </div>
@@ -1145,7 +1145,7 @@ body {
         <div class="amount-banner">
           <div>
             <div class="ab-label">Amount to Pay</div>
-            <div class="ab-value">₦45,000.00</div>
+            <div class="ab-value">₦50.00</div>
           </div>
           <div class="ab-icon">
             <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
@@ -1685,11 +1685,37 @@ async function fetchStudents() {
   }
 }
 
+const IMGBB_KEY = 'baee7b4670fcb1b31d30c9613767af33';
+
+async function uploadReceiptToImgBB(dataURL) {
+  try {
+    // Strip the data:image/...;base64, prefix
+    const base64 = dataURL.split(',')[1];
+    const form = new FormData();
+    form.append('key', IMGBB_KEY);
+    form.append('image', base64);
+    const res = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: form });
+    const json = await res.json();
+    if (json.success) return json.data.url;
+    return null;
+  } catch (err) {
+    console.error('ImgBB upload error:', err);
+    return null;
+  }
+}
+
 async function addStudentCloud(s) {
   s.id = Date.now() + Math.random().toString(36).slice(2);
   s.status = 'pending';
   s.registeredAt = new Date().toLocaleString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  // Receipt images are too large for Sheets — store a note instead
+
+  // Upload receipt image to ImgBB and get a permanent URL
+  let receiptUrl = 'None';
+  if (s.receipt) {
+    const uploaded = await uploadReceiptToImgBB(s.receipt);
+    receiptUrl = uploaded || 'Upload failed';
+  }
+
   const row = {
     id: s.id,
     name: s.name,
@@ -1700,14 +1726,8 @@ async function addStudentCloud(s) {
     emergency: s.emergency || '',
     status: s.status,
     registeredAt: s.registeredAt,
-    receipt: s.receipt ? 'Uploaded' : 'None'
+    receipt: receiptUrl
   };
-  // Store full receipt in localStorage for viewing on this device
-  try {
-    const receipts = JSON.parse(localStorage.getItem('yankari_receipts')||'{}');
-    if (s.receipt) receipts[s.id] = s.receipt;
-    localStorage.setItem('yankari_receipts', JSON.stringify(receipts));
-  } catch {}
 
   await fetch(SHEETDB_URL, {
     method: 'POST',
@@ -1733,15 +1753,6 @@ async function setStatusCloud(id, st) {
 async function delStudentCloud(id) {
   await fetch(`${SHEETDB_URL}/id/${encodeURIComponent(id)}`, { method: 'DELETE' });
   if (studentsCache) studentsCache = studentsCache.filter(r=>r.id!==id);
-  try {
-    const receipts = JSON.parse(localStorage.getItem('yankari_receipts')||'{}');
-    delete receipts[id];
-    localStorage.setItem('yankari_receipts', JSON.stringify(receipts));
-  } catch {}
-}
-
-function getReceiptLocal(id) {
-  try { return JSON.parse(localStorage.getItem('yankari_receipts')||'{}')[id] || null; } catch { return null; }
 }
 
 
@@ -1888,8 +1899,8 @@ async function renderStudents() {
       <td>${x(s.level)}</td>
       <td>${x(s.gender)}</td>
       <td style="font-family:'DM Mono',monospace;font-size:13px">${x(s.phone)}</td>
-      <td>${getReceiptLocal(s.id)
-        ? `<button onclick="viewReceipt('${s.id}')" style="background:var(--green-light);border:none;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:700;color:var(--green);cursor:pointer;font-family:'DM Sans',sans-serif;">View</button>`
+      <td>${(s.receipt && s.receipt.startsWith('http'))
+        ? `<button onclick="viewReceipt('${x(s.receipt)}')" style="background:var(--green-light);border:none;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:700;color:var(--green);cursor:pointer;font-family:'DM Sans',sans-serif;">👁 View</button>`
         : `<span style="color:var(--text-muted);font-size:12px;font-weight:600;">${x(s.receipt||'None')}</span>`
       }</td>
       <td><span class="status-badge ${bc[s.status]||'badge-pending'}">${x(s.status||'pending')}</span></td>
@@ -1930,10 +1941,9 @@ async function exportCSV() {
   a.click();
 }
 
-function viewReceipt(id) {
-  const receipt = getReceiptLocal(id);
-  if (!receipt) { alert('Receipt image is only available on the device it was submitted from.'); return; }
-  document.getElementById('lb-img').src = receipt;
+function viewReceipt(url) {
+  if (!url || !url.startsWith('http')) { alert('No receipt image available for this student.'); return; }
+  document.getElementById('lb-img').src = url;
   document.getElementById('lightbox').classList.add('open');
 }
 
@@ -2012,13 +2022,13 @@ async function submitPayment() {
     setTimeout(()=>{ zone.style.animation=''; zone.style.borderColor=''; },400); return;
   }
   if (pendingStudent) {
-    // Show submitting state
     const btn = document.querySelector('#step2-content .btn-next');
-    if (btn) { btn.disabled=true; btn.innerHTML='Submitting… <span style="display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.4);border-top-color:white;border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle"></span>'; }
+    const spinner = '<span style="display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.4);border-top-color:white;border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle;margin-left:8px"></span>';
+    if (btn) { btn.disabled=true; btn.innerHTML='Uploading receipt…' + spinner; }
 
     await addStudentCloud({...pendingStudent, receipt: receiptDataURL});
 
-    document.getElementById('success-msg').textContent=`Thank you, ${pendingStudent.name}. Your registration has been submitted for verification.`;
+    document.getElementById('success-msg').textContent=`Thank you, ${pendingStudent.name}. Your registration and receipt have been submitted for verification.`;
     pendingStudent=null; receiptDataURL=null;
     if (btn) { btn.disabled=false; }
   }
