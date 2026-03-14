@@ -1601,6 +1601,7 @@ async function renderStudents(){
       ${s.status!=='verified'?`<button class="action-btn btn-verify" onclick="chgStatus('${s.id}','verified',this)">✓ Verify</button>`:''}
       ${s.status!=='rejected'?`<button class="action-btn btn-reject" onclick="chgStatus('${s.id}','rejected',this)">✕ Reject</button>`:''}
       ${s.status!=='pending'?`<button class="action-btn btn-set-pending" onclick="chgStatus('${s.id}','pending',this)">↺</button>`:''}
+      ${s.status==='verified'?`<button class="action-btn" onclick="downloadQR(${JSON.stringify(s).replace(/"/g,'&quot;')})" style="background:#ecfdf5;color:#065f46">⬇ QR</button>`:''}
       <button class="action-btn btn-delete" onclick="rmStudent('${s.id}',this)">🗑</button>
     </td>
   </tr>`).join('')}</tbody></table>`;
@@ -1616,6 +1617,27 @@ async function exportCSV(){
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='sas_retreat_students.csv';a.click();
 }
 function viewReceipt(url){if(!url||!url.startsWith('http')){alert('No receipt image available.');return;}document.getElementById('lb-img').src=url;document.getElementById('lightbox').classList.add('open');}
+
+// Download the student's QR code ticket as a PNG
+async function downloadQR(student) {
+  const qrURL = buildQRImageURL(student);
+  try {
+    // Fetch image as blob so we can trigger a real file download
+    const res = await fetch(qrURL);
+    const blob = await res.blob();
+    const blobURL = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = blobURL;
+    a.download = `SAS_Ticket_${student.name.replace(/\s+/g,'_')}_${student.regNo}.png`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(blobURL);
+  } catch(err) {
+    // Fallback — open in new tab if direct download fails
+    window.open(qrURL, '_blank');
+  }
+}
 
 // ═══ REGISTER FORM ═══
 let pendingStudent=null,receiptDataURL=null;
@@ -1862,6 +1884,7 @@ async function sendVerifiedTicketEmail(student) {
       location:   'Ahmadu Bello University, Zaria',
       ticket_fee: '₦2,500',
       qr_image:   qrImageURL,
+      qr_link:    qrImageURL,
       message:    '🎉 Your payment has been verified! Your spot at the SAS 3-Day Retreat 2026 is confirmed. Present the QR code below at the entrance on April 13th. See you there!',
     });
     console.log('Verified ticket email sent to', student.email);
