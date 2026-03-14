@@ -1882,10 +1882,20 @@ async function sendRegistrationEmail(student) {
 async function sendVerifiedTicketEmail(student) {
   if (!student.email) return;
   try {
-    // Generate QR code containing student ticket data
+    // Step 1 — generate QR as base64 data URL
     const qrPayload = buildTicketPayload(student);
     const qrDataURL = await generateQRDataURL(qrPayload);
 
+    // Step 2 — upload QR image to ImgBB to get a real hosted URL
+    // EmailJS cannot embed base64 images directly — they must be a real URL
+    let qrImageURL = '';
+    if (qrDataURL) {
+      const uploaded = await uploadReceiptToImgBB(qrDataURL);
+      qrImageURL = uploaded || '';
+      console.log('QR uploaded to ImgBB:', qrImageURL);
+    }
+
+    // Step 3 — send email with the hosted QR image URL
     await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_VERIFIED, {
       to_name:    student.name,
       to_email:   student.email,
@@ -1897,11 +1907,9 @@ async function sendVerifiedTicketEmail(student) {
       event_date: '13th – 15th April, 2026',
       location:   'Ahmadu Bello University, Zaria',
       ticket_fee: '₦2,500',
-      // The QR image as base64 — embed in your EmailJS template as <img src="{{qr_image}}">
-      qr_image:   qrDataURL || '',
-      // Also send plain-text ticket data as fallback
+      qr_image:   qrImageURL,
       ticket_data: qrPayload,
-      message:    `🎉 Your payment has been verified! Your spot at the SAS 3-Day Retreat 2026 is confirmed. Present the QR code below at the entrance on April 13th. See you there!`,
+      message:    '🎉 Your payment has been verified! Your spot at the SAS 3-Day Retreat 2026 is confirmed. Present the QR code below at the entrance on April 13th. See you there!',
     });
     console.log('Verified ticket email sent to', student.email);
   } catch(err) {
