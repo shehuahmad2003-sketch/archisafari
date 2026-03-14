@@ -1412,37 +1412,90 @@ function renderDayDetail(dayId){
 // ═══ CLOUD / SHEETDB ═══
 const SHEETDB_URL='https://sheetdb.io/api/v1/8X0bcPPNmYOMB0yg9';
 let studentsCache=null;
+
 async function fetchStudents(){
-  try{const res=await fetch(SHEETDB_URL);const data=await res.json();studentsCache=Array.isArray(data)?data:[];return studentsCache;}
-  catch(err){console.error('SheetDB error:',err);return studentsCache||[];}
+  try{
+    const res=await fetch(SHEETDB_URL);
+    if(!res.ok){ console.error('SheetDB fetch failed, status:',res.status); return studentsCache||[]; }
+    const data=await res.json();
+    if(!Array.isArray(data)){ console.error('SheetDB returned unexpected data:',data); return studentsCache||[]; }
+    studentsCache=data;
+    return studentsCache;
+  }catch(err){
+    console.error('SheetDB fetch error:',err);
+    return studentsCache||[];
+  }
 }
+
 const IMGBB_KEY='baee7b4670fcb1b31d30c9613767af33';
 async function uploadReceiptToImgBB(dataURL){
   try{const base64=dataURL.split(',')[1];const form=new FormData();form.append('key',IMGBB_KEY);form.append('image',base64);const res=await fetch('https://api.imgbb.com/1/upload',{method:'POST',body:form});const json=await res.json();if(json.success)return json.data.url;return null;}
   catch(err){console.error('ImgBB error:',err);return null;}
 }
+
 async function addStudentCloud(s){
   s.id=Date.now()+Math.random().toString(36).slice(2);
   s.status='pending';
   s.registeredAt=new Date().toLocaleString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
   let receiptUrl='None';
   if(s.receipt){const up=await uploadReceiptToImgBB(s.receipt);receiptUrl=up||'Upload failed';}
-  const row={id:s.id,name:s.name,regNo:s.regNo,level:s.level,gender:s.gender,phone:s.phone,emergency:s.emergency||'',email:s.email||'',status:s.status,registeredAt:s.registeredAt,receipt:receiptUrl};
-  await fetch(SHEETDB_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({data:[row]})});
-  if(studentsCache)studentsCache.unshift(row);
-  // Send registration confirmation email
-  if(s.email) sendRegistrationEmail(row);
+  const row={
+    id:          s.id,
+    name:        s.name,
+    regNo:       s.regNo,
+    level:       s.level,
+    gender:      s.gender,
+    phone:       s.phone,
+    email:       s.email||'',
+    emergency:   s.emergency||'',
+    status:      s.status,
+    registeredAt:s.registeredAt,
+    receipt:     receiptUrl
+  };
+  try{
+    const res=await fetch(SHEETDB_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({data:[row]})
+    });
+    const result=await res.json();
+    console.log('SheetDB POST result:',result);
+    if(result.created===1){
+      // Success — add to local cache
+      if(!studentsCache) studentsCache=[];
+      studentsCache.unshift(row);
+      if(s.email) sendRegistrationEmail(row);
+    } else {
+      console.error('SheetDB did not confirm save:',result);
+      alert('Registration may not have saved properly. Please check your Google Sheet headers match exactly:\nid | name | regNo | level | gender | phone | email | emergency | status | registeredAt | receipt');
+    }
+  }catch(err){
+    console.error('SheetDB POST error:',err);
+    alert('Could not connect to the database. Please check your internet connection and try again.');
+  }
   return row;
 }
+
 async function setStatusCloud(id,st){
-  await fetch(`${SHEETDB_URL}/id/${encodeURIComponent(id)}`,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({data:{status:st}})});
+  try{
+    const res=await fetch(`${SHEETDB_URL}/id/${encodeURIComponent(id)}`,{
+      method:'PATCH',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({data:{status:st}})
+    });
+    const result=await res.json();
+    console.log('SheetDB PATCH result:',result);
+  }catch(err){ console.error('SheetDB PATCH error:',err); }
   if(studentsCache){
     const s=studentsCache.find(r=>r.id===id);
-    if(s){ s.status=st; if(s.email) sendStatusEmail(s,st); }
+    if(s){ s.status=st; sendStatusEmail(s,st); }
   }
 }
+
 async function delStudentCloud(id){
-  await fetch(`${SHEETDB_URL}/id/${encodeURIComponent(id)}`,{method:'DELETE'});
+  try{
+    await fetch(`${SHEETDB_URL}/id/${encodeURIComponent(id)}`,{method:'DELETE'});
+  }catch(err){ console.error('SheetDB DELETE error:',err); }
   if(studentsCache)studentsCache=studentsCache.filter(r=>r.id!==id);
 }
 
