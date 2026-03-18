@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAS 3-Day Retreat — Society of Architectural Students, ABU Zaria</title>
+<title>SAS 3-Day Retreat — Kehinde Abolarin Zaria</title>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -11,19 +11,19 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
 :root{
-  --ink:#0f0e0d;
-  --paper:#f5f2ed;
+  --ink:#0a2218;
+  --paper:#f5faf7;
   --card:#ffffff;
-  --orange:#d4521a;
-  --orange-dark:#b03f10;
-  --orange-light:#fbeee8;
-  --orange-xlight:#fdf6f2;
-  --gold:#c49a2a;
-  --gold-light:#fdf3d8;
-  --teal:#1a6b6b;
-  --teal-light:#e4f4f4;
-  --muted:#7a756e;
-  --border:#e8e3db;
+  --orange:#2d9e5f;
+  --orange-dark:#1e7a47;
+  --orange-light:#e2f5eb;
+  --orange-xlight:#f0fdf5;
+  --gold:#38b06e;
+  --gold-light:#d4f0e4;
+  --teal:#1e7a47;
+  --teal-light:#dcf2e8;
+  --muted:#5a7a65;
+  --border:#cce8d8;
   --red:#dc2626;
   --nav-h:68px;
 }
@@ -38,7 +38,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .topnav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   height:var(--nav-h);
-  background:rgba(245,242,237,0.94);
+  background:rgba(240,249,244,0.95);
   backdrop-filter:blur(20px);
   border-bottom:1px solid rgba(0,0,0,0.06);
   display:flex;align-items:center;justify-content:space-between;
@@ -68,7 +68,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
   font-family:'Manrope',sans-serif;letter-spacing:.3px;
   transition:background .2s;
 }
-.nav-cta:hover{background:var(--orange)}
+.nav-cta:hover{background:var(--orange-dark)}
 .nav-admin-btn{
   display:flex;align-items:center;gap:6px;color:var(--muted);
   font-size:12px;font-weight:600;cursor:pointer;padding:8px 14px;
@@ -191,7 +191,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
   cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;
   transition:background .2s;margin-bottom:10px;
 }
-.btn-ticket:hover{background:var(--orange)}
+.btn-ticket:hover{background:var(--orange-dark)}
 .ticket-note{text-align:center;font-size:11px;color:var(--muted)}
 .ticket-divider{
   height:32px;overflow:hidden;position:relative;
@@ -365,7 +365,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .field-group:last-child{margin-bottom:0}
 .field-input{
   width:100%;border:1.5px solid var(--border);
-  padding:11px 13px;font-size:14px;color:var(--ink);background:#fafaf8;
+  padding:11px 13px;font-size:14px;color:var(--ink);background:#f5faf7;
   outline:none;font-family:'Manrope',sans-serif;transition:border-color .2s,background .2s;
   -webkit-appearance:none;appearance:none;border-radius:0;
 }
@@ -401,7 +401,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .upload-card{background:var(--card);padding:28px 30px;border:1px solid var(--border);margin-bottom:16px}
 .upload-card-title{display:flex;align-items:center;gap:10px;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;margin-bottom:6px}
 .upload-card-sub{font-size:13px;color:var(--muted);margin-bottom:18px;line-height:1.6}
-.upload-zone{border:2px dashed var(--border);padding:36px 24px;text-align:center;cursor:pointer;transition:all .2s;position:relative;background:#fafaf8}
+.upload-zone{border:2px dashed var(--border);padding:36px 24px;text-align:center;cursor:pointer;transition:all .2s;position:relative;background:#f5faf7}
 .upload-zone:hover{border-color:var(--orange);background:var(--orange-xlight)}
 .upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
 .upload-icon{width:48px;height:48px;background:var(--orange-light);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
@@ -434,8 +434,8 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .tag-alert{background:#fff3e0;color:#c45000}
 .tag-new{background:var(--orange-light);color:var(--orange)}
 .update-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.5px;color:var(--ink);margin-bottom:8px}
-.update-body{font-size:13px;color:#6b6660;line-height:1.7;margin-bottom:14px}
-.update-date{font-family:'JetBrains Mono',monospace;font-size:10px;color:#bbb;letter-spacing:.5px}
+.update-body{font-size:13px;color:#4a6652;line-height:1.7;margin-bottom:14px}
+.update-date{font-family:'JetBrains Mono',monospace;font-size:10px;color:#8ab89a;letter-spacing:.5px}
 
 /* ═══ ADMIN LOGIN ═══ */
 .admin-login-page{min-height:calc(100vh - var(--nav-h));display:flex;align-items:center;justify-content:center;padding:48px;background:var(--ink)}
@@ -448,7 +448,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .al-footer{font-family:'JetBrains Mono',monospace;font-size:10px;color:#ccc;text-align:center;margin-top:22px;letter-spacing:.5px}
 
 /* ═══ ADMIN DASHBOARD ═══ */
-.admin-page{min-height:calc(100vh - var(--nav-h));background:#f0ede8}
+.admin-page{min-height:calc(100vh - var(--nav-h));background:#f0fdf5}
 .admin-topbar{background:var(--ink);padding:36px 72px 28px;position:relative;overflow:hidden}
 .admin-topbar-bg{position:absolute;right:-10px;bottom:-20px;font-family:'Bebas Neue',sans-serif;font-size:140px;color:rgba(255,255,255,0.03);line-height:1;pointer-events:none;letter-spacing:2px}
 .admin-topbar-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;display:flex;align-items:flex-start;justify-content:space-between}
@@ -484,8 +484,8 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .export-btn:hover{border-color:var(--ink);background:var(--ink);color:white}
 .table-wrap{background:white;overflow:hidden;border:1px solid var(--border)}
 .students-table{width:100%;border-collapse:collapse}
-.students-table th{padding:12px 16px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;background:#f8f6f2;border-bottom:1px solid var(--border)}
-.students-table td{padding:13px 16px;border-bottom:1px solid #f2ede8;font-size:13px;vertical-align:middle}
+.students-table th{padding:12px 16px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;background:#f5faf7;border-bottom:1px solid var(--border)}
+.students-table td{padding:13px 16px;border-bottom:1px solid #f0fdf5;font-size:13px;vertical-align:middle}
 .students-table tr:last-child td{border-bottom:none}
 .students-table tr:hover td{background:var(--orange-xlight)}
 .student-name-td{font-weight:700;color:var(--ink);margin-bottom:2px}
@@ -525,7 +525,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .um-list-card,.um-form-card{background:white;padding:22px;border:1px solid var(--border)}
 .um-form-card{position:sticky;top:calc(var(--nav-h) + 20px)}
 .um-form-title{display:flex;align-items:center;gap:8px;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;margin-bottom:18px;color:var(--ink)}
-.um-item{display:flex;align-items:flex-start;gap:12px;padding:14px;border:1px solid var(--border);margin-bottom:8px;background:#fafaf8}
+.um-item{display:flex;align-items:flex-start;gap:12px;padding:14px;border:1px solid var(--border);margin-bottom:8px;background:#f5faf7}
 .um-item-body{flex:1;min-width:0}
 .um-item-title{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .um-item-preview{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:'JetBrains Mono',monospace}
@@ -641,11 +641,11 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
     <div class="hero-left">
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-dot"></div>
-        Society of Architecture Students · ABU Zaria · Registration Open
+        Society of Architectural Students · ABU Zaria · Registration Open
       </div>
 
       <h1 class="hero-title">SAS<br>4-Day</h1>
-      <span class="hero-title-line2">Retreat '26</a></span>
+      <span class="hero-title-line2">Retreat '26</span>
 
       <p class="hero-sub">A fun-filled, action-packed social event designed to foster unity, enhance communication, and build goodwill across the department. Three days. One community. Unlimited energy.</p>
 
@@ -683,7 +683,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             Secure Your Spot
           </button>
-          <p class="ticket-note">₦2,000 for first 20 students — Early Bird Promo</p>
+          <p class="ticket-note">₦2,000 for first 20 students — Early Bird</p>
         </div>
         <div class="ticket-divider"><div class="ticket-divider-line"></div></div>
         <div class="ticket-bottom">
@@ -698,7 +698,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
             </div>
             <div>
               <div class="tg-label">Starts</div>
-              <div class="tg-val">Mar 19</div>
+              <div class="tg-val">Apr 17</div>
             </div>
             <div>
               <div class="tg-label">Reg. closes</div>
@@ -784,7 +784,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
             <div class="promo-item"><div class="promo-dash">—</div>Orientation/Exhibition — 8am to 11am (Day 1)</div>
             <div class="promo-item"><div class="promo-dash">—</div>Picnic — 3pm to 6pm (Day 1)</div>
             <div class="promo-item"><div class="promo-dash">—</div>Ice Breaker Activities — 9am to 10am (Day 2)</div>
-             <div class="promo-item"><div class="promo-dash">—</div>Scavenger Hunt -10am to 1pm (Day 2)</div>
+            <div class="promo-item"><div class="promo-dash">—</div>Scavenger Hunt -10am to 1pm (Day 2)</div>
             <div class="promo-item"><div class="promo-dash">—</div>Club Architecture -7pm to 11:30pm (Day 2)</div>
             <div class="promo-item"><div class="promo-dash">—</div>Fitness Walk — 6am to 10am (Day 3)</div>
             <div class="promo-item"><div class="promo-dash">—</div>Movie Night — 7pm to 11:30pm (Day 3)</div>
@@ -840,7 +840,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
           <div class="ric-item"><div class="ric-dash">—</div>17th, 18th &amp; 19th April 2026</div>
           <div class="ric-item"><div class="ric-dash">—</div>Ahmadu Bello University, Zaria</div>
           <div class="ric-item"><div class="ric-dash">—</div>Registration closes April 5, 2026</div>
-          <div class="ric-item"><div class="ric-dash">—</div>Ticket: ₦2,600 per student(₦2,100 for first 20 students)</div>
+          <div class="ric-item"><div class="ric-dash">—</div>Ticket: ₦2,600 per student(₦2,000 for first 20 students)</div>
           <div class="ric-item"><div class="ric-dash">—</div>Open to all levels — 100 to MSc</div>
         </div>
       </div>
@@ -1246,7 +1246,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 // ═══ UPDATES ═══
 const UPD_KEY='sas_retreat_updates_v1';
 const DEFAULT_UPDATES=[
-  {id:'u1',title:'Registration Is Now Open!',body:'Tickets for the SAS 3-Day Retreat 2026 are ₦2,500 per student. Limited to 300 spots — register early to avoid disappointment.',tag:'new',date:'Apr 1, 2026'},
+  {id:'u1',title:'Registration Is Now Open!',body:'Tickets for the SAS 3-Day Retreat 2026 are ₦2,600 per student. Limited to 300 spots — register early to avoid disappointment.',tag:'new',date:'Apr 1, 2026'},
   {id:'u2',title:'Payment Deadline — April 10',body:'All registrations must be completed by April 10, 2026. Unverified spots may be released after this date. Please upload your receipt.',tag:'alert',date:'Apr 1, 2026'},
   {id:'u3',title:'What To Bring',body:'Comfortable walking shoes, sunscreen, your student ID, and your energy! A detailed packing list will be shared closer to the date.',tag:'info',date:'Apr 1, 2026'},
   {id:'u4',title:'Club Architecture Night — Dress Code',body:'Club Architecture Night takes place on Day 1, from 7pm to 11:30pm. Smart casual attire is encouraged. Stay tuned for theme details.',tag:'info',date:'Apr 1, 2026'}
@@ -1327,7 +1327,7 @@ function deleteUpdate(id){
 // ═══ ITINERARY ═══
 const ITIN_KEY='sas_retreat_itinerary_v1';
 const DEFAULT_ITINERARY=[
-  {id:'d1',dayNum:1,name:'Opening Day',date:'Apr 13, 2026',events:[
+  {id:'d1',dayNum:1,name:'Opening Day',date:'Apr 17, 2026',events:[
     {id:'e1',time:'9:00am',name:'Icebreaker Activities'},
     {id:'e2',time:'10:00am',name:'Scavenger Hunt'},
     {id:'e3',time:'7:00pm',name:'Club Architecture Night'},
@@ -1365,7 +1365,7 @@ function renderPublicSchedule(){
     </div>
   </div>`).join('');
   const sub=document.getElementById('schedule-subtitle');
-  if(sub&&days.length>=2)sub.textContent=`SAS 3-DAY RETREAT · ${days[0].date.toUpperCase()} – ${days[days.length-1].date.toUpperCase()} · ABU ZARIA`;
+  if(sub&&days.length>=2)sub.textContent=`SAS 4-DAY RETREAT · ${days[0].date.toUpperCase()} – ${days[days.length-1].date.toUpperCase()} · ABU ZARIA`;
 }
 
 // Admin itinerary
@@ -1577,7 +1577,7 @@ function refreshStats(list){
 }
 async function renderStudents(){
   const wrap=document.getElementById('admin-list-wrap');if(!wrap)return;
-  wrap.innerHTML=`<div class="empty-state"><div style="display:inline-block;width:32px;height:32px;border:3px solid #f0ede8;border-top-color:var(--orange);border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:12px"></div><p>Loading registrations…</p></div>`;
+  wrap.innerHTML=`<div class="empty-state"><div style="display:inline-block;width:32px;height:32px;border:3px solid #f0fdf5;border-top-color:var(--orange);border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:12px"></div><p>Loading registrations…</p></div>`;
   const all=await fetchStudents();refreshStats(all);
   const q=(document.getElementById('admin-search')?.value||'').toLowerCase();
   let list=[...all];
@@ -1700,10 +1700,10 @@ function removeReceipt(){
   document.getElementById('upload-zone').style.display='';
 }
 function copyAcct(){
-  navigator.clipboard.writeText('0123456789').then(()=>{
+  navigator.clipboard.writeText('8143345632').then(()=>{
     const btn=document.getElementById('copy-acct-btn');btn.textContent='✓ Copied!';btn.classList.add('copied');
     setTimeout(()=>{btn.innerHTML=`<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy`;btn.classList.remove('copied');},2000);
-  }).catch(()=>{alert('Account number: 0123456789');});
+  }).catch(()=>{alert('Account number: 8143345632');});
 }
 async function submitPayment(){
   if(!receiptDataURL){
@@ -1743,7 +1743,7 @@ function openEditDayModal(dayId){
     <div class="field-group"><div class="field-label">Day Title <span class="required">*</span></div>
       <input class="field-input" type="text" id="im-dayname" placeholder="e.g. Opening Day" value="${day?x(day.name):''}"></div>
     <div class="field-group"><div class="field-label">Date <span class="required">*</span></div>
-      <input class="field-input" type="text" id="im-daydate" placeholder="e.g. Apr 13, 2026" value="${day?x(day.date):''}"></div>
+      <input class="field-input" type="text" id="im-daydate" placeholder="e.g. Apr 17, 2026" value="${day?x(day.date):''}"></div>
     <div style="display:flex;gap:10px;margin-top:6px">
       <button class="btn-next" onclick="saveDayModal('${dayId||''}')">${day?'Save Changes →':'Add Day →'}</button>
       <button onclick="document.getElementById('itin-day-modal').remove()" style="flex:none;padding:14px 20px;border:2px solid var(--border);background:white;font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;cursor:pointer;color:var(--muted)">Cancel</button>
@@ -1829,7 +1829,7 @@ function initEmailJS() {
 // Uses goqr.me API — returns a direct image URL that works in emails
 function buildQRImageURL(student) {
   const data = [
-    'SAS 3-DAY RETREAT 2026',
+    'SAS 4-DAY RETREAT 2026',
     `NAME: ${student.name}`,
     `REG NO: ${student.regNo}`,
     `LEVEL: ${student.level}`,
@@ -1840,7 +1840,7 @@ function buildQRImageURL(student) {
   // Encode as URL-safe string
   const encoded = encodeURIComponent(data);
   // goqr.me returns a PNG image directly — no upload needed
-  return `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encoded}&bgcolor=ffffff&color=000000&margin=10`;
+  return `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encoded}&bgcolor=ffffff&color=0d1f14&margin=10`;
 }
 
 // ── Send registration confirmation (pending) ──
@@ -1854,9 +1854,9 @@ async function sendRegistrationEmail(student) {
       level:      student.level,
       phone:      student.phone,
       event_name: 'SAS 3-Day Retreat 2026',
-      event_date: '13th – 15th April, 2026',
+      event_date: '17th – 19th April, 2026',
       location:   'Ahmadu Bello University, Zaria',
-      ticket_fee: '₦2,500',
+      ticket_fee: '₦2,600',
       message:    'Thank you for registering! Your payment receipt has been received and is currently under review. You will receive your QR ticket by email once an organiser verifies your payment.',
     });
     console.log('Confirmation email sent to', student.email);
@@ -1881,9 +1881,9 @@ async function sendVerifiedTicketEmail(student) {
       phone:      student.phone,
       ticket_id:  student.id,
       event_name: 'SAS 3-Day Retreat 2026',
-      event_date: '13th – 15th April, 2026',
+      event_date: '17th – 19th April, 2026',
       location:   'Ahmadu Bello University, Zaria',
-      ticket_fee: '₦2,500',
+      ticket_fee: '₦2,600',
       qr_image:   qrImageURL,
       qr_link:    qrImageURL,
       message:    '🎉 Your payment has been verified! Your spot at the SAS 3-Day Retreat 2026 is confirmed. Present the QR code below at the entrance on April 13th. See you there!',
@@ -1905,9 +1905,9 @@ async function sendRejectedEmail(student) {
       level:      student.level,
       phone:      student.phone,
       event_name: 'SAS 3-Day Retreat 2026',
-      event_date: '13th – 15th April, 2026',
+      event_date: '17th – 19th April, 2026',
       location:   'Ahmadu Bello University, Zaria',
-      ticket_fee: '₦2,500',
+      ticket_fee: '₦2,600',
       message:    'We were unable to verify your payment for the SAS 3-Day Retreat 2026. Please contact the SAS organisers for assistance or re-register with a valid receipt.',
     });
     console.log('Rejection email sent to', student.email);
