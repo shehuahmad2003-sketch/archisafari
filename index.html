@@ -85,14 +85,12 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
    HOME
 ════════════════════════ */
 
-/* Hero — dark ink with orange typographic explosion */
 .hero{
   background:var(--ink);
   min-height:92vh;
   display:grid;grid-template-columns:1fr 400px;
   position:relative;overflow:hidden;
 }
-/* large decorative type behind hero */
 .hero-bg-text{
   position:absolute;bottom:-40px;left:-20px;
   font-family:'Bebas Neue',sans-serif;font-size:clamp(180px,18vw,280px);
@@ -158,7 +156,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 }
 .btn-ghost:hover{color:white}
 
-/* Ticket panel */
 .hero-right{
   background:rgba(255,255,255,0.03);
   border-left:1px solid rgba(255,255,255,0.06);
@@ -169,7 +166,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
   background:var(--paper);width:100%;max-width:320px;
   position:relative;
 }
-/* ticket tear effect */
 .ticket::before{
   content:'';position:absolute;left:-1px;right:-1px;top:50%;height:1px;
   background:repeating-linear-gradient(90deg,transparent,transparent 6px,var(--ink) 6px,var(--ink) 14px);
@@ -212,7 +208,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .tg-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
 .tg-val{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--ink)}
 
-/* Hero animations */
 .hero-left>*{animation:fadeUp .55s ease both}
 .hero-left>*:nth-child(1){animation-delay:.04s}
 .hero-left>*:nth-child(2){animation-delay:.10s}
@@ -221,7 +216,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .hero-left>*:nth-child(5){animation-delay:.28s}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
-/* Home body */
 .home-body{max-width:1200px;margin:0 auto;padding:80px 52px}
 .sec-label{
   font-family:'JetBrains Mono',monospace;font-size:10px;
@@ -234,7 +228,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 }
 .sec-sub{font-size:15px;color:var(--muted);line-height:1.7;max-width:520px;margin-bottom:52px}
 
-/* Quick cards */
 .quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-bottom:80px;border:1px solid var(--border)}
 .quick-card{
   background:var(--card);padding:32px 28px;
@@ -258,7 +251,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .qc-sub{font-size:13px;color:var(--muted);line-height:1.6}
 .qc-link{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--orange);margin-top:16px;letter-spacing:.3px}
 
-/* Objectives */
 .obj-section{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .obj-list{display:flex;flex-direction:column}
 .obj-item{
@@ -274,7 +266,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .obj-title{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:5px}
 .obj-desc{font-size:13px;color:var(--muted);line-height:1.65}
 
-/* Promo block */
 .promo-block{background:var(--ink);padding:44px;position:relative;overflow:hidden}
 .promo-block::before{
   content:'SAS';
@@ -299,7 +290,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 }
 .promo-cta:hover{background:var(--orange-dark)}
 
-/* ═══ PAGE HEADER (shared) ═══ */
 .page-header{background:var(--ink);padding:56px 72px 44px;position:relative;overflow:hidden}
 .page-header-bg{
   position:absolute;right:-20px;bottom:-20px;
@@ -311,7 +301,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .page-header h1{font-family:'Bebas Neue',sans-serif;font-size:54px;letter-spacing:2px;color:white;margin-bottom:6px}
 .page-header p{font-size:14px;color:rgba(255,255,255,0.45);font-family:'JetBrains Mono',monospace;letter-spacing:.5px}
 
-/* ═══ SCHEDULE ═══ */
 .schedule-body{max-width:1200px;margin:0 auto;padding:56px 52px}
 .schedule-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border)}
 .day-col{background:var(--card);overflow:hidden;border-right:1px solid var(--border)}
@@ -335,7 +324,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .ev-content{padding:12px 14px 12px 12px;flex:1}
 .ev-name{font-size:12px;color:var(--ink);line-height:1.45;font-weight:600}
 
-/* ═══ REGISTER ═══ */
 .register-layout{max-width:1200px;margin:0 auto;padding:56px 52px;display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:start}
 .reg-info-card{background:var(--ink);padding:36px;margin-bottom:20px;position:relative;overflow:hidden}
 .reg-info-card-bg{position:absolute;right:-10px;bottom:-20px;font-family:'Bebas Neue',sans-serif;font-size:130px;color:rgba(255,255,255,0.03);line-height:1;pointer-events:none;letter-spacing:2px}
@@ -380,7 +368,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 }
 .btn-next:hover{background:var(--orange)}
 
-/* Payment */
 .amount-banner{
   background:var(--ink);padding:28px 30px;
   display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;
@@ -413,7 +400,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .upload-success-badge{display:none;align-items:center;gap:8px;background:#d1fae5;color:#065f46;padding:10px 14px;margin-top:12px;font-size:13px;font-weight:700}
 .admin-err{font-size:12px;color:var(--red);margin-top:8px;display:none;font-family:'JetBrains Mono',monospace}
 
-/* Success */
 .success-page{min-height:calc(100vh - var(--nav-h));display:flex;align-items:center;justify-content:center;padding:48px}
 .success-box{background:var(--card);padding:60px 52px;max-width:500px;width:100%;text-align:center;border:1px solid var(--border)}
 .success-icon{width:80px;height:80px;background:var(--orange-light);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
@@ -424,7 +410,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .btn-back-home{width:100%;background:none;color:var(--muted);border:none;padding:12px;font-family:'Manrope',sans-serif;font-size:13px;cursor:pointer;transition:color .2s}
 .btn-back-home:hover{color:var(--ink)}
 
-/* ═══ UPDATES ═══ */
 .updates-body{max-width:1200px;margin:0 auto;padding:56px 52px}
 .updates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
 .update-card{background:var(--card);padding:28px;transition:background .2s;cursor:default}
@@ -437,7 +422,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .update-body{font-size:13px;color:#4a6652;line-height:1.7;margin-bottom:14px}
 .update-date{font-family:'JetBrains Mono',monospace;font-size:10px;color:#8ab89a;letter-spacing:.5px}
 
-/* ═══ ADMIN LOGIN ═══ */
 .admin-login-page{min-height:calc(100vh - var(--nav-h));display:flex;align-items:center;justify-content:center;padding:48px;background:var(--ink)}
 .admin-login-box{background:white;padding:48px 44px;max-width:420px;width:100%;box-shadow:0 40px 100px rgba(0,0,0,0.4)}
 .al-tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:16px;display:block}
@@ -447,7 +431,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .pw-toggle{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:#aaa;padding:4px}
 .al-footer{font-family:'JetBrains Mono',monospace;font-size:10px;color:#ccc;text-align:center;margin-top:22px;letter-spacing:.5px}
 
-/* ═══ ADMIN DASHBOARD ═══ */
 .admin-page{min-height:calc(100vh - var(--nav-h));background:#f0fdf5}
 .admin-topbar{background:var(--ink);padding:36px 72px 28px;position:relative;overflow:hidden}
 .admin-topbar-bg{position:absolute;right:-10px;bottom:-20px;font-family:'Bebas Neue',sans-serif;font-size:140px;color:rgba(255,255,255,0.03);line-height:1;pointer-events:none;letter-spacing:2px}
@@ -505,14 +488,20 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .btn-delete:hover{background:var(--red);color:white}
 .empty-state{text-align:center;padding:52px 24px;color:var(--muted);font-size:13px}
 
-/* Lightbox */
+/* GAS error banner */
+.gas-error-banner{
+  background:#fff3cd;border:1px solid #ffc107;color:#856404;
+  padding:14px 18px;margin-bottom:16px;font-size:13px;display:none;
+  font-family:'JetBrains Mono',monospace;letter-spacing:.3px;
+}
+.gas-error-banner a{color:#856404;font-weight:700;}
+
 .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;display:none;align-items:center;justify-content:center}
 .lightbox.open{display:flex}
 .lightbox img{max-width:90vw;max-height:88vh;box-shadow:0 24px 80px rgba(0,0,0,0.5)}
 .lb-close{position:absolute;top:24px;right:28px;width:40px;height:40px;background:rgba(255,255,255,0.1);border:none;color:white;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
 .lb-close:hover{background:rgba(255,255,255,0.2)}
 
-/* Change PW */
 .changepw-page{min-height:calc(100vh - var(--nav-h));display:flex;align-items:center;justify-content:center;padding:48px;background:var(--ink)}
 .changepw-box{background:white;padding:48px 44px;max-width:440px;width:100%;box-shadow:0 40px 100px rgba(0,0,0,0.4)}
 .cp-title{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:1.5px;color:var(--ink);margin-bottom:6px}
@@ -520,7 +509,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .cp-err{font-size:12px;color:var(--red);margin-top:8px;display:none;font-family:'JetBrains Mono',monospace}
 .cp-success{font-size:12px;color:#059669;font-weight:700;margin-top:8px;display:none;font-family:'JetBrains Mono',monospace}
 
-/* Updates manager */
 .updates-manager-wrap{display:grid;grid-template-columns:1fr 360px;gap:16px;margin-top:4px}
 .um-list-card,.um-form-card{background:white;padding:22px;border:1px solid var(--border)}
 .um-form-card{position:sticky;top:calc(var(--nav-h) + 20px)}
@@ -536,7 +524,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 .um-del-btn:hover{background:var(--red);color:white}
 .um-empty{text-align:center;padding:48px 24px;color:var(--muted);font-size:13px}
 
-/* Itinerary manager */
 .itin-manager-wrap{display:grid;grid-template-columns:320px 1fr;gap:16px;margin-top:4px}
 .itin-left{display:flex;flex-direction:column;gap:12px}
 .itin-days-card,.itin-event-form-card{background:white;padding:20px;border:1px solid var(--border)}
@@ -630,80 +617,44 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
   </div>
 </nav>
 
-<!-- ═══════════════════════
-     HOME
-═══════════════════════ -->
+<!-- HOME -->
 <div class="page active" id="page-home">
-
   <section class="hero">
     <div class="hero-bg-text">SAS 2026</div>
-
     <div class="hero-left">
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-dot"></div>
         Society of Architectural Students · ABU Zaria · Registration Open
       </div>
-
       <h1 class="hero-title">SAS<br>4-Day</h1>
       <span class="hero-title-line2">Retreat '26</span>
-
       <p class="hero-sub">A fun-filled, action-packed social event designed to foster unity, enhance communication, and build goodwill across the department. Three days. One community. Unlimited energy.</p>
-
       <div class="hero-meta">
-        <div class="hero-pill">
-          <span class="hero-pill-tag">Date</span>
-          17th, 18th &amp; 19th April 2026
-        </div>
-        <div class="hero-pill">
-          <span class="hero-pill-tag">Venue</span>
-          Ahmadu Bello University, Zaria
-        </div>
-        <div class="hero-pill">
-          <span class="hero-pill-tag">Open To</span>
-          All Levels — 100 Level to MSc
-        </div>
+        <div class="hero-pill"><span class="hero-pill-tag">Date</span>17th, 18th &amp; 19th April 2026</div>
+        <div class="hero-pill"><span class="hero-pill-tag">Venue</span>Ahmadu Bello University, Zaria</div>
+        <div class="hero-pill"><span class="hero-pill-tag">Open To</span>All Levels — 100 Level to MSc</div>
       </div>
-
       <div class="hero-actions">
-        <button class="btn-primary" onclick="showPage('register')">
-          Register Now
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
+        <button class="btn-primary" onclick="showPage('register')">Register Now <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
         <button class="btn-ghost" onclick="showPage('schedule')">View Schedule →</button>
       </div>
     </div>
-
     <div class="hero-right">
       <div class="ticket">
         <div class="ticket-top">
           <div class="ticket-label">Ticket Price</div>
           <div class="ticket-price">₦2,600</div>
           <div class="ticket-per">per student · all activities included</div>
-          <button class="btn-ticket" onclick="showPage('register')">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            Secure Your Spot
-          </button>
+          <button class="btn-ticket" onclick="showPage('register')"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Secure Your Spot</button>
           <p class="ticket-note">Early Bird promo over😊 — Back to normal price</p>
         </div>
         <div class="ticket-divider"><div class="ticket-divider-line"></div></div>
         <div class="ticket-bottom">
           <div class="ticket-grid">
-            <div>
-              <div class="tg-label">Duration</div>
-              <div class="tg-val">4 Days</div>
-            </div>
-            <div>
-              <div class="tg-label">Capacity</div>
-              <div class="tg-val">300 pax</div>
-            </div>
-            <div>
-              <div class="tg-label">Starts</div>
-              <div class="tg-val">Apr 17</div>
-            </div>
-            <div>
-              <div class="tg-label">Reg. closes</div>
-              <div class="tg-val">Apr 5</div>
-            </div>
+            <div><div class="tg-label">Duration</div><div class="tg-val">4 Days</div></div>
+            <div><div class="tg-label">Capacity</div><div class="tg-val">300 pax</div></div>
+            <div><div class="tg-label">Starts</div><div class="tg-val">Apr 17</div></div>
+            <div><div class="tg-label">Reg. closes</div><div class="tg-val">Apr 5</div></div>
           </div>
         </div>
       </div>
@@ -711,11 +662,8 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
   </section>
 
   <div class="home-body">
-
-    <!-- Quick links -->
     <div class="sec-label">Quick Access</div>
     <div class="sec-title" style="margin-bottom:40px">Everything You Need</div>
-
     <div class="quick-grid">
       <div class="quick-card" onclick="showPage('schedule')">
         <div class="qc-num">01</div>
@@ -736,48 +684,20 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
         <div class="qc-link">Read Updates →</div>
       </div>
     </div>
-
-    <!-- Objectives + promo -->
     <div class="obj-section">
       <div>
         <div class="sec-label">Why Attend</div>
         <div class="sec-title">Strategic<br>Objectives</div>
         <p class="sec-sub">Through engaging activities and structured recreation, the retreat provides lasting value to every student who attends.</p>
         <div class="obj-list">
-          <div class="obj-item">
-            <div class="obj-num">01</div>
-            <div class="obj-content">
-              <div class="obj-title">Fostering Unity</div>
-              <div class="obj-desc">Creating a platform for students to build lasting friendships and professional connections across the department.</div>
-            </div>
-          </div>
-          <div class="obj-item">
-            <div class="obj-num">02</div>
-            <div class="obj-content">
-              <div class="obj-title">Team Synergy</div>
-              <div class="obj-desc">Encouraging students to collaborate toward common goals — building essential leadership and teamwork skills.</div>
-            </div>
-          </div>
-          <div class="obj-item">
-            <div class="obj-num">03</div>
-            <div class="obj-content">
-              <div class="obj-title">Inter-Level Relations</div>
-              <div class="obj-desc">A bridge to improve relationships and healthy competition between different levels in the department.</div>
-            </div>
-          </div>
-          <div class="obj-item">
-            <div class="obj-num">04</div>
-            <div class="obj-content">
-              <div class="obj-title">Structured Recreation</div>
-              <div class="obj-desc">A well-organised event that adds genuine value to student life without interfering with academic schedules.</div>
-            </div>
-          </div>
+          <div class="obj-item"><div class="obj-num">01</div><div class="obj-content"><div class="obj-title">Fostering Unity</div><div class="obj-desc">Creating a platform for students to build lasting friendships and professional connections across the department.</div></div></div>
+          <div class="obj-item"><div class="obj-num">02</div><div class="obj-content"><div class="obj-title">Team Synergy</div><div class="obj-desc">Encouraging students to collaborate toward common goals — building essential leadership and teamwork skills.</div></div></div>
+          <div class="obj-item"><div class="obj-num">03</div><div class="obj-content"><div class="obj-title">Inter-Level Relations</div><div class="obj-desc">A bridge to improve relationships and healthy competition between different levels in the department.</div></div></div>
+          <div class="obj-item"><div class="obj-num">04</div><div class="obj-content"><div class="obj-title">Structured Recreation</div><div class="obj-desc">A well-organised event that adds genuine value to student life without interfering with academic schedules.</div></div></div>
         </div>
       </div>
-
       <div>
         <div class="promo-block">
-          <div class="promo-block-bg"></div>
           <div class="promo-inner">
             <span class="promo-tag">What's Happening</span>
             <div class="promo-title">4 Days of Action-Packed Activities</div>
@@ -789,21 +709,15 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
             <div class="promo-item"><div class="promo-dash">—</div>Fitness Walk — 6am to 10am (Day 3)</div>
             <div class="promo-item"><div class="promo-dash">—</div>Movie Night — 7pm to 11:30pm (Day 3)</div>
             <div class="promo-item"><div class="promo-dash">—</div>Ramadan Cup Final (Day 4)</div>
-            <button class="promo-cta" onclick="showPage('register')">
-              Get Ticket — ₦2,600
-              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
+            <button class="promo-cta" onclick="showPage('register')">Get Ticket — ₦2,600 <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- ═══════════════════════
-     SCHEDULE
-═══════════════════════ -->
+<!-- SCHEDULE -->
 <div class="page" id="page-schedule">
   <div class="page-header">
     <div class="page-header-bg">SCHED</div>
@@ -817,9 +731,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
   </div>
 </div>
 
-<!-- ═══════════════════════
-     REGISTER
-═══════════════════════ -->
+<!-- REGISTER -->
 <div class="page" id="page-register">
   <div class="page-header">
     <div class="page-header-bg">REG</div>
@@ -828,9 +740,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
       <p>SECURE YOUR TICKET TO THE SAS 4-DAY RETREAT 2026</p>
     </div>
   </div>
-
   <div class="register-layout">
-    <!-- Info panel -->
     <div class="reg-left">
       <div class="reg-info-card">
         <div class="reg-info-card-bg">SAS</div>
@@ -854,154 +764,71 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
         </div>
       </div>
     </div>
-
-    <!-- Form -->
     <div class="reg-right">
       <div class="steps-indicator">
-        <div class="si-step active" id="si-step1">
-          <div class="si-circle">1</div>
-          <div class="si-label">Your Details</div>
-        </div>
+        <div class="si-step active" id="si-step1"><div class="si-circle">1</div><div class="si-label">Your Details</div></div>
         <div class="si-line" id="si-line1"></div>
-        <div class="si-step" id="si-step2">
-          <div class="si-circle">2</div>
-          <div class="si-label">Payment</div>
-        </div>
+        <div class="si-step" id="si-step2"><div class="si-circle">2</div><div class="si-label">Payment</div></div>
       </div>
-
-      <!-- Step 1 -->
       <div id="step1-content">
         <div class="form-card">
-          <div class="form-card-title">
-            <svg width="20" height="20" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            Your Information
-          </div>
+          <div class="form-card-title"><svg width="20" height="20" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Your Information</div>
           <div class="form-card-sub">Please fill in your details accurately as they appear on your student ID.</div>
-
-          <div class="field-group">
-            <div class="field-label">Full Name <span class="required">*</span></div>
-            <input class="field-input" type="text" id="f-name" placeholder="e.g. Aisha Ibrahim Mohammed">
+          <div class="field-group"><div class="field-label">Full Name <span class="required">*</span></div><input class="field-input" type="text" id="f-name" placeholder="e.g. Aisha Ibrahim Mohammed"></div>
+          <div class="field-row">
+            <div><div class="field-label">Reg. Number <span class="required">*</span></div><input class="field-input" type="text" id="f-reg" placeholder="e.g. U22/ARCH/0042"></div>
+            <div><div class="field-label">Level <span class="required">*</span></div><select class="field-input field-select" id="f-level"><option value="">— Select —</option><option>100</option><option>200</option><option>300</option><option>400</option><option>MSc</option></select></div>
           </div>
           <div class="field-row">
-            <div>
-              <div class="field-label">Reg. Number <span class="required">*</span></div>
-              <input class="field-input" type="text" id="f-reg" placeholder="e.g. U22/ARCH/0042">
-            </div>
-            <div>
-              <div class="field-label">Level <span class="required">*</span></div>
-              <select class="field-input field-select" id="f-level">
-                <option value="">— Select —</option>
-                <option>100</option><option>200</option><option>300</option>
-                <option>400</option><option>MSc</option>
-              </select>
-            </div>
+            <div><div class="field-label">Gender <span class="required">*</span></div><select class="field-input field-select" id="f-gender"><option value="">— Select —</option><option>Male</option><option>Female</option></select></div>
+            <div><div class="field-label">Phone Number <span class="required">*</span></div><input class="field-input" type="tel" id="f-phone" placeholder="08XXXXXXXXX"></div>
           </div>
-          <div class="field-row">
-            <div>
-              <div class="field-label">Gender <span class="required">*</span></div>
-              <select class="field-input field-select" id="f-gender">
-                <option value="">— Select —</option>
-                <option>Male</option><option>Female</option>
-              </select>
-            </div>
-            <div>
-              <div class="field-label">Phone Number <span class="required">*</span></div>
-              <input class="field-input" type="tel" id="f-phone" placeholder="08XXXXXXXXX">
-            </div>
-          </div>
-          <div class="field-group">
-            <div class="field-label">Emergency Contact <span style="color:var(--muted);text-transform:none;font-weight:500;font-family:'Manrope',sans-serif;font-size:11px">(optional)</span></div>
-            <input class="field-input" type="text" id="f-emergency" placeholder="Name &amp; phone number">
-          </div>
+          <div class="field-group"><div class="field-label">Emergency Contact <span style="color:var(--muted);text-transform:none;font-weight:500;font-family:'Manrope',sans-serif;font-size:11px">(optional)</span></div><input class="field-input" type="text" id="f-emergency" placeholder="Name &amp; phone number"></div>
           <div class="field-group">
             <div class="field-label">Email Address <span class="required">*</span></div>
             <input class="field-input" type="email" id="f-email" placeholder="your@email.com">
             <div style="font-size:11px;color:var(--muted);margin-top:5px;font-family:'JetBrains Mono',monospace;letter-spacing:.3px">Your QR ticket will be sent here once payment is verified</div>
           </div>
         </div>
-        <button class="btn-next" onclick="submitForm()">
-          Continue to Payment
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
+        <button class="btn-next" onclick="submitForm()">Continue to Payment <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
       </div>
-
-      <!-- Step 2 -->
       <div id="step2-content" style="display:none">
         <div class="amount-banner">
-          <div>
-            <div class="ab-label">Amount to Pay</div>
-            <div class="ab-value">₦2,600 Ticket price</div>
-          </div>
+          <div><div class="ab-label">Amount to Pay</div><div class="ab-value">₦2,600 Ticket price</div></div>
           <div class="ab-badge">Retreat Ticket</div>
         </div>
-
         <div class="acct-card">
-          <div class="acct-card-title">
-            <svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-            Transfer Details
-          </div>
-          <div class="acct-row">
-            <div><div class="acct-row-label">Bank</div><div class="acct-row-value">Moniepoint MFB</div></div>
-          </div>
-          <div class="acct-row">
-            <div><div class="acct-row-label">Account Number</div><div class="acct-row-value big">8143345632</div></div>
-            <button class="copy-btn" id="copy-acct-btn" onclick="copyAcct()">
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-              Copy
-            </button>
-          </div>
-          <div class="acct-row">
-            <div><div class="acct-row-label">Account Name</div><div class="acct-row-value">Kehinde Abolarin</div></div>
-          </div>
-          <div class="acct-row">
-            <div><div class="acct-row-label">Narration</div><div class="acct-row-value" id="pay-narration" style="color:var(--orange)">SAS Retreat — Your Name</div></div>
-          </div>
+          <div class="acct-card-title"><svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Transfer Details</div>
+          <div class="acct-row"><div><div class="acct-row-label">Bank</div><div class="acct-row-value">Moniepoint MFB</div></div></div>
+          <div class="acct-row"><div><div class="acct-row-label">Account Number</div><div class="acct-row-value big">8143345632</div></div><button class="copy-btn" id="copy-acct-btn" onclick="copyAcct()"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copy</button></div>
+          <div class="acct-row"><div><div class="acct-row-label">Account Name</div><div class="acct-row-value">Kehinde Abolarin</div></div></div>
+          <div class="acct-row"><div><div class="acct-row-label">Narration</div><div class="acct-row-value" id="pay-narration" style="color:var(--orange)">SAS Retreat — Your Name</div></div></div>
         </div>
-
         <div class="upload-card">
-          <div class="upload-card-title">
-            <svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            Upload Receipt
-          </div>
+          <div class="upload-card-title"><svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Upload Receipt</div>
           <div class="upload-card-sub">Screenshot your transfer confirmation and upload it below.</div>
           <div class="upload-zone" id="upload-zone" onclick="document.getElementById('receipt-file').click()">
             <input type="file" id="receipt-file" accept="image/*,.pdf" style="display:none" onchange="handleReceiptUpload(this)">
-            <div class="upload-icon">
-              <svg width="20" height="20" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            </div>
+            <div class="upload-icon"><svg width="20" height="20" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
             <div class="upload-text">Click to upload receipt</div>
             <div class="upload-hint">PNG, JPG or PDF — max 5MB</div>
           </div>
-          <div class="receipt-preview" id="receipt-preview">
-            <img id="receipt-img" src="" alt="Receipt preview">
-            <button class="receipt-preview-remove" onclick="removeReceipt()">✕</button>
-          </div>
-          <div class="upload-success-badge" id="upload-badge">
-            <svg width="15" height="15" fill="none" stroke="#065f46" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Receipt ready to upload
-          </div>
+          <div class="receipt-preview" id="receipt-preview"><img id="receipt-img" src="" alt="Receipt preview"><button class="receipt-preview-remove" onclick="removeReceipt()">✕</button></div>
+          <div class="upload-success-badge" id="upload-badge"><svg width="15" height="15" fill="none" stroke="#065f46" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Receipt ready to upload</div>
           <div class="admin-err" id="receipt-err">Please upload your payment receipt to continue.</div>
         </div>
-
-        <button class="btn-next" onclick="submitPayment()">
-          Submit Registration
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
+        <button class="btn-next" onclick="submitPayment()">Submit Registration <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
         <button onclick="goBackToDetails()" style="width:100%;background:none;color:var(--muted);border:none;padding:12px;font-family:'Manrope',sans-serif;font-size:13px;cursor:pointer;margin-top:6px">← Back to Details</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════
-     SUCCESS
-═══════════════════════ -->
+<!-- SUCCESS -->
 <div class="page" id="page-success">
   <div class="success-page">
     <div class="success-box">
-      <div class="success-icon">
-        <svg width="36" height="36" fill="none" stroke="var(--orange)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
+      <div class="success-icon"><svg width="36" height="36" fill="none" stroke="var(--orange)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
       <div class="success-title">Registration Submitted!</div>
       <p class="success-sub" id="success-msg">Your registration has been submitted. You will be notified once your payment is verified.</p>
       <button class="btn-again" onclick="registerAnother()">Register Another Student</button>
@@ -1010,9 +837,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
   </div>
 </div>
 
-<!-- ═══════════════════════
-     UPDATES
-═══════════════════════ -->
+<!-- UPDATES -->
 <div class="page" id="page-updates">
   <div class="page-header">
     <div class="page-header-bg">NEWS</div>
@@ -1028,9 +853,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
   </div>
 </div>
 
-<!-- ═══════════════════════
-     ADMIN LOGIN
-═══════════════════════ -->
+<!-- ADMIN LOGIN -->
 <div class="page" id="page-admin-login">
   <div class="admin-login-page">
     <div class="admin-login-box">
@@ -1041,24 +864,17 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
         <div class="field-label">Password</div>
         <div class="pw-wrap">
           <input class="field-input" type="password" id="admin-login-pw" placeholder="Enter password" onkeydown="if(event.key==='Enter')doAdminLogin()">
-          <button class="pw-toggle" onclick="togglePwVis('admin-login-pw',this)">
-            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-          </button>
+          <button class="pw-toggle" onclick="togglePwVis('admin-login-pw',this)"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
         </div>
         <div class="admin-err" id="admin-login-err">Incorrect password. Please try again.</div>
       </div>
-      <button class="btn-next" onclick="doAdminLogin()">
-        Sign In
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
+      <button class="btn-next" onclick="doAdminLogin()">Sign In <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
       <div class="al-footer">RESTRICTED ACCESS · SAS ORGANISERS ONLY</div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════
-     ADMIN DASHBOARD
-═══════════════════════ -->
+<!-- ADMIN DASHBOARD -->
 <div class="page" id="page-admin">
   <div class="admin-page">
     <div class="admin-topbar">
@@ -1069,18 +885,11 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
           <div class="admin-subtitle">SAS 4-DAY RETREAT 2026 · MANAGE REGISTRATIONS</div>
         </div>
         <div class="admin-topbar-btns">
-          <button class="admin-action-btn ab-secondary" onclick="showPage('changepw')">
-            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-            Change Password
-          </button>
-          <button class="admin-action-btn ab-danger" onclick="adminLogout()">
-            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
-            Log Out
-          </button>
+          <button class="admin-action-btn ab-secondary" onclick="showPage('changepw')"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Change Password</button>
+          <button class="admin-action-btn ab-danger" onclick="adminLogout()"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>Log Out</button>
         </div>
       </div>
     </div>
-
     <div class="admin-body">
       <div class="stats-row">
         <div class="stat-card"><div class="stat-num stat-orange" id="stat-total">0</div><div class="stat-label">Total Registered</div></div>
@@ -1088,7 +897,6 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
         <div class="stat-card"><div class="stat-num stat-teal" id="stat-verified">0</div><div class="stat-label">Verified</div></div>
         <div class="stat-card"><div class="stat-num stat-red" id="stat-rejected">0</div><div class="stat-label">Rejected</div></div>
       </div>
-
       <div class="admin-section-tabs">
         <button class="ast-tab active" id="ast-students" onclick="switchAdminSection('students')">👥 Students</button>
         <button class="ast-tab" id="ast-updates" onclick="switchAdminSection('updates')">📢 Announcements</button>
@@ -1097,6 +905,10 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 
       <!-- Students -->
       <div id="admin-section-students">
+        <!-- GAS error banner -->
+        <div class="gas-error-banner" id="gas-error-banner">
+          ⚠ Could not connect to Google Sheet. Check your GAS deployment or internet connection.
+        </div>
         <div class="admin-controls">
           <div class="admin-tab-bar">
             <button class="admin-tab active" onclick="setAdminTab('all',this)">All</button>
@@ -1105,10 +917,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
             <button class="admin-tab" onclick="setAdminTab('rejected',this)">Rejected</button>
           </div>
           <input class="admin-search" id="admin-search" placeholder="Search name, reg no…" oninput="renderStudents()">
-          <button class="export-btn" onclick="exportCSV()">
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Export CSV
-          </button>
+          <button class="export-btn" onclick="exportCSV()"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Export CSV</button>
         </div>
         <div class="table-wrap"><div id="admin-list-wrap"><div class="empty-state">Loading…</div></div></div>
       </div>
@@ -1117,38 +926,16 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
       <div id="admin-section-updates" style="display:none">
         <div class="updates-manager-wrap">
           <div class="um-list-card">
-            <div class="um-form-title">
-              <svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
-              Published Announcements
-            </div>
+            <div class="um-form-title"><svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>Published Announcements</div>
             <div id="um-admin-list"><div class="um-empty">No announcements yet.</div></div>
           </div>
           <div class="um-form-card">
-            <div class="um-form-title" id="um-form-title">
-              <svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-              New Announcement
-            </div>
-            <div class="field-group">
-              <div class="field-label">Title <span class="required">*</span></div>
-              <input class="field-input" type="text" id="um-title" placeholder="Announcement title">
-            </div>
-            <div class="field-group">
-              <div class="field-label">Message <span class="required">*</span></div>
-              <textarea class="field-input" id="um-body" rows="4" placeholder="Write your announcement…" style="resize:vertical;min-height:90px"></textarea>
-            </div>
+            <div class="um-form-title" id="um-form-title"><svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>New Announcement</div>
+            <div class="field-group"><div class="field-label">Title <span class="required">*</span></div><input class="field-input" type="text" id="um-title" placeholder="Announcement title"></div>
+            <div class="field-group"><div class="field-label">Message <span class="required">*</span></div><textarea class="field-input" id="um-body" rows="4" placeholder="Write your announcement…" style="resize:vertical;min-height:90px"></textarea></div>
             <div class="field-row">
-              <div>
-                <div class="field-label">Tag</div>
-                <select class="field-input field-select" id="um-tag">
-                  <option value="new">✓ New</option>
-                  <option value="info">ℹ Info</option>
-                  <option value="alert">⚠ Urgent</option>
-                </select>
-              </div>
-              <div>
-                <div class="field-label">Date</div>
-                <input class="field-input" type="text" id="um-date" placeholder="e.g. Apr 5, 2026">
-              </div>
+              <div><div class="field-label">Tag</div><select class="field-input field-select" id="um-tag"><option value="new">✓ New</option><option value="info">ℹ Info</option><option value="alert">⚠ Urgent</option></select></div>
+              <div><div class="field-label">Date</div><input class="field-input" type="text" id="um-date" placeholder="e.g. Apr 5, 2026"></div>
             </div>
             <div style="display:flex;gap:8px">
               <button class="btn-next" onclick="saveUpdate()" id="um-submit-btn" style="font-size:13px;padding:12px">Publish Announcement →</button>
@@ -1158,28 +945,19 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
         </div>
       </div>
 
-      <!-- Schedule/Itinerary -->
+      <!-- Schedule -->
       <div id="admin-section-itinerary" style="display:none">
         <div class="itin-manager-wrap">
           <div class="itin-left">
             <div class="itin-days-card">
               <div class="itin-section-label">Days</div>
               <div id="itin-day-list"></div>
-              <button class="itin-add-day-btn" onclick="addDay()">
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                Add New Day
-              </button>
+              <button class="itin-add-day-btn" onclick="addDay()"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add New Day</button>
             </div>
             <div class="itin-event-form-card" id="itin-event-form-card">
               <div class="itin-section-label">Add / Edit Event</div>
-              <div class="field-group">
-                <div class="field-label">Time</div>
-                <input class="field-input" type="text" id="ie-time" placeholder="e.g. 9:00am">
-              </div>
-              <div class="field-group">
-                <div class="field-label">Event Name</div>
-                <input class="field-input" type="text" id="ie-name" placeholder="e.g. Scavenger Hunt">
-              </div>
+              <div class="field-group"><div class="field-label">Time</div><input class="field-input" type="text" id="ie-time" placeholder="e.g. 9:00am"></div>
+              <div class="field-group"><div class="field-label">Event Name</div><input class="field-input" type="text" id="ie-name" placeholder="e.g. Scavenger Hunt"></div>
               <div style="display:flex;gap:8px">
                 <button class="btn-next" onclick="submitEvent()" id="ie-submit-btn" style="font-size:12px;padding:10px">Add Event</button>
                 <button onclick="cancelEditEvent()" id="ie-cancel-btn" style="display:none;flex:none;padding:10px 13px;border:2px solid var(--border);background:white;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;cursor:pointer;color:var(--muted)">Cancel</button>
@@ -1195,40 +973,16 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
   </div>
 </div>
 
-<!-- ═══════════════════════
-     CHANGE PASSWORD
-═══════════════════════ -->
+<!-- CHANGE PASSWORD -->
 <div class="page" id="page-changepw">
   <div class="changepw-page">
     <div class="changepw-box">
-      <button onclick="showPage('admin')" style="display:flex;align-items:center;gap:6px;background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;font-family:'JetBrains Mono',monospace;margin-bottom:22px;padding:0;letter-spacing:.5px">
-        ← BACK TO DASHBOARD
-      </button>
+      <button onclick="showPage('admin')" style="display:flex;align-items:center;gap:6px;background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;font-family:'JetBrains Mono',monospace;margin-bottom:22px;padding:0;letter-spacing:.5px">← BACK TO DASHBOARD</button>
       <div class="cp-title">Change Password</div>
       <div class="cp-sub">Update your admin portal password below.</div>
-      <div class="field-group">
-        <div class="field-label">Current Password</div>
-        <div class="pw-wrap">
-          <input class="field-input" type="password" id="cp-current" placeholder="Current password">
-          <button class="pw-toggle" onclick="togglePwVis('cp-current',this)"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
-        </div>
-      </div>
-      <div class="field-group">
-        <div class="field-label">New Password</div>
-        <div class="pw-wrap">
-          <input class="field-input" type="password" id="cp-new" placeholder="Min. 6 characters" oninput="checkPwStrength(this.value)">
-          <button class="pw-toggle" onclick="togglePwVis('cp-new',this)"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
-        </div>
-        <div id="pw-strength-bar" style="display:none;height:4px;background:#eee;margin-top:8px;overflow:hidden"><div id="pw-strength-fill"></div></div>
-        <div id="pw-strength-label" style="font-size:11px;margin-top:4px;font-weight:700;font-family:'JetBrains Mono',monospace"></div>
-      </div>
-      <div class="field-group">
-        <div class="field-label">Confirm Password</div>
-        <div class="pw-wrap">
-          <input class="field-input" type="password" id="cp-confirm" placeholder="Repeat new password">
-          <button class="pw-toggle" onclick="togglePwVis('cp-confirm',this)"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
-        </div>
-      </div>
+      <div class="field-group"><div class="field-label">Current Password</div><div class="pw-wrap"><input class="field-input" type="password" id="cp-current" placeholder="Current password"><button class="pw-toggle" onclick="togglePwVis('cp-current',this)"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></div>
+      <div class="field-group"><div class="field-label">New Password</div><div class="pw-wrap"><input class="field-input" type="password" id="cp-new" placeholder="Min. 6 characters" oninput="checkPwStrength(this.value)"><button class="pw-toggle" onclick="togglePwVis('cp-new',this)"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div><div id="pw-strength-bar" style="display:none;height:4px;background:#eee;margin-top:8px;overflow:hidden"><div id="pw-strength-fill"></div></div><div id="pw-strength-label" style="font-size:11px;margin-top:4px;font-weight:700;font-family:'JetBrains Mono',monospace"></div></div>
+      <div class="field-group"><div class="field-label">Confirm Password</div><div class="pw-wrap"><input class="field-input" type="password" id="cp-confirm" placeholder="Repeat new password"><button class="pw-toggle" onclick="togglePwVis('cp-confirm',this)"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></div>
       <div class="cp-err" id="cp-err"></div>
       <div class="cp-success" id="cp-success">✓ PASSWORD UPDATED. REDIRECTING…</div>
       <button class="btn-next" onclick="changePassword()">Update Password</button>
@@ -1243,7 +997,7 @@ body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);m
 </div>
 
 <script>
-// ═══ UPDATES ═══
+// ═══ UPDATES (localStorage) ═══
 const UPD_KEY='sas_retreat_updates_v1';
 const DEFAULT_UPDATES=[
   {id:'u1',title:'Registration Is Now Open!',body:'Tickets for the SAS 3-Day Retreat 2026 are ₦2,600 per student. Limited to 300 spots — register early to avoid disappointment.',tag:'new',date:'Apr 1, 2026'},
@@ -1253,39 +1007,22 @@ const DEFAULT_UPDATES=[
 ];
 function getUpdates(){try{const s=localStorage.getItem(UPD_KEY);if(s)return JSON.parse(s);}catch{}saveUpdates(DEFAULT_UPDATES);return DEFAULT_UPDATES;}
 function saveUpdates(list){try{localStorage.setItem(UPD_KEY,JSON.stringify(list));}catch{}}
-
 function renderPublicUpdates(){
   const grid=document.getElementById('public-updates-grid');if(!grid)return;
   const list=getUpdates();
-  if(!list.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--muted)">No updates yet. Check back soon.</div>';return;}
+  if(!list.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--muted)">No updates yet.</div>';return;}
   const tMap={alert:'tag-alert',info:'tag-info',new:'tag-new'};
   const tLbl={alert:'⚠ Urgent',info:'ℹ Info',new:'✓ New'};
-  grid.innerHTML=list.map(u=>`<div class="update-card">
-    <span class="update-tag ${tMap[u.tag]||'tag-new'}">${tLbl[u.tag]||'New'}</span>
-    <div class="update-title">${x(u.title)}</div>
-    <div class="update-body">${x(u.body)}</div>
-    <div class="update-date">${x(u.date)}</div>
-  </div>`).join('');
+  grid.innerHTML=list.map(u=>`<div class="update-card"><span class="update-tag ${tMap[u.tag]||'tag-new'}">${tLbl[u.tag]||'New'}</span><div class="update-title">${x(u.title)}</div><div class="update-body">${x(u.body)}</div><div class="update-date">${x(u.date)}</div></div>`).join('');
 }
-
 let editingUpdateId=null;
 function renderAdminUpdates(){
   const wrap=document.getElementById('um-admin-list');if(!wrap)return;
   const list=getUpdates();
   if(!list.length){wrap.innerHTML='<div class="um-empty">No announcements yet.</div>';return;}
   const tLbl={alert:'⚠ Urgent',info:'ℹ Info',new:'✓ New'};
-  wrap.innerHTML=list.map(u=>`<div class="um-item">
-    <div class="um-item-body">
-      <div class="um-item-title">${x(u.title)}</div>
-      <div class="um-item-preview">${tLbl[u.tag]||'New'} · ${x(u.date)} · ${x(u.body).slice(0,55)}…</div>
-    </div>
-    <div class="um-item-actions">
-      <button class="um-edit-btn" onclick="editUpdate('${u.id}')">✏ Edit</button>
-      <button class="um-del-btn" onclick="deleteUpdate('${u.id}')">🗑</button>
-    </div>
-  </div>`).join('');
+  wrap.innerHTML=list.map(u=>`<div class="um-item"><div class="um-item-body"><div class="um-item-title">${x(u.title)}</div><div class="um-item-preview">${tLbl[u.tag]||'New'} · ${x(u.date)} · ${x(u.body).slice(0,55)}…</div></div><div class="um-item-actions"><button class="um-edit-btn" onclick="editUpdate('${u.id}')">✏ Edit</button><button class="um-del-btn" onclick="deleteUpdate('${u.id}')">🗑</button></div></div>`).join('');
 }
-
 function saveUpdate(){
   const title=document.getElementById('um-title').value.trim();
   const body=document.getElementById('um-body').value.trim();
@@ -1297,27 +1034,21 @@ function saveUpdate(){
   else{list.unshift({id:'u'+Date.now(),title,body,tag,date});}
   saveUpdates(list);clearUpdateForm();renderAdminUpdates();renderPublicUpdates();
 }
-
 function editUpdate(id){
   const u=getUpdates().find(u=>u.id===id);if(!u)return;
   editingUpdateId=id;
-  document.getElementById('um-title').value=u.title;
-  document.getElementById('um-body').value=u.body;
-  document.getElementById('um-tag').value=u.tag;
-  document.getElementById('um-date').value=u.date;
+  document.getElementById('um-title').value=u.title;document.getElementById('um-body').value=u.body;
+  document.getElementById('um-tag').value=u.tag;document.getElementById('um-date').value=u.date;
   document.getElementById('um-form-title').innerHTML=`<svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit Announcement`;
-  document.getElementById('um-submit-btn').textContent='Save Changes →';
-  document.getElementById('um-cancel-btn').style.display='';
+  document.getElementById('um-submit-btn').textContent='Save Changes →';document.getElementById('um-cancel-btn').style.display='';
   document.getElementById('um-title').focus();
 }
 function cancelEditUpdate(){editingUpdateId=null;clearUpdateForm();}
 function clearUpdateForm(){
-  editingUpdateId=null;
-  ['um-title','um-body'].forEach(id=>document.getElementById(id).value='');
+  editingUpdateId=null;['um-title','um-body'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('um-tag').value='new';document.getElementById('um-date').value='';
   document.getElementById('um-form-title').innerHTML=`<svg width="18" height="18" fill="none" stroke="var(--orange)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> New Announcement`;
-  document.getElementById('um-submit-btn').textContent='Publish Announcement →';
-  document.getElementById('um-cancel-btn').style.display='none';
+  document.getElementById('um-submit-btn').textContent='Publish Announcement →';document.getElementById('um-cancel-btn').style.display='none';
 }
 function deleteUpdate(id){
   if(!confirm('Delete this announcement?'))return;
@@ -1327,592 +1058,471 @@ function deleteUpdate(id){
 // ═══ ITINERARY ═══
 const ITIN_KEY='sas_retreat_itinerary_v1';
 const DEFAULT_ITINERARY=[
-  {id:'d1',dayNum:1,name:'Opening Day',date:'Apr 17, 2026',events:[
-    {id:'e1',time:'9:00am',name:'Icebreaker Activities'},
-    {id:'e2',time:'10:00am',name:'Scavenger Hunt'},
-    {id:'e3',time:'7:00pm',name:'Club Architecture Night'},
-  ]},
-  {id:'d2',dayNum:2,name:'Day Two',date:'Apr 14, 2026',events:[
-    {id:'e4',time:'3:00pm',name:'Picnic'},
-  ]},
-  {id:'d3',dayNum:3,name:'Day Three',date:'Apr 15, 2026',events:[
-    {id:'e5',time:'6:00am',name:'Fitness Walk'},
-    {id:'e6',time:'7:00pm',name:'Movie Night'},
-  ]},
-  {id:'d4',dayNum:4,name:'Bonus Day',date:'Apr 16, 2026',events:[
-    {id:'e7',time:'TBC',name:'Ramadan Cup Final'},
-  ]},
+  {id:'d1',dayNum:1,name:'Opening Day',date:'Apr 17, 2026',events:[{id:'e1',time:'9:00am',name:'Icebreaker Activities'},{id:'e2',time:'10:00am',name:'Scavenger Hunt'},{id:'e3',time:'7:00pm',name:'Club Architecture Night'}]},
+  {id:'d2',dayNum:2,name:'Day Two',date:'Apr 14, 2026',events:[{id:'e4',time:'3:00pm',name:'Picnic'}]},
+  {id:'d3',dayNum:3,name:'Day Three',date:'Apr 15, 2026',events:[{id:'e5',time:'6:00am',name:'Fitness Walk'},{id:'e6',time:'7:00pm',name:'Movie Night'}]},
+  {id:'d4',dayNum:4,name:'Bonus Day',date:'Apr 16, 2026',events:[{id:'e7',time:'TBC',name:'Ramadan Cup Final'}]},
 ];
 function getItinerary(){try{const s=localStorage.getItem(ITIN_KEY);if(s)return JSON.parse(s);}catch{}saveItinerary(DEFAULT_ITINERARY);return DEFAULT_ITINERARY;}
 function saveItinerary(list){try{localStorage.setItem(ITIN_KEY,JSON.stringify(list));}catch{}}
-
 function renderPublicSchedule(){
   const grid=document.getElementById('public-schedule-grid');if(!grid)return;
   const days=getItinerary();
   if(!days.length){grid.innerHTML='<div style="grid-column:1/-1;padding:48px;text-align:center;color:var(--muted)">Schedule coming soon.</div>';return;}
-  const cols=Math.min(days.length,4);
-  grid.style.gridTemplateColumns=`repeat(${cols},1fr)`;
-  grid.innerHTML=days.map(day=>`<div class="day-col">
-    <div class="day-head">
-      <span class="day-badge">Day ${day.dayNum}</span>
-      <div class="day-name">${x(day.name)}</div>
-      <div class="day-date-text">${x(day.date)}</div>
-    </div>
-    <div class="event-list">
-      ${day.events.length
-        ?day.events.map(e=>`<div class="ev"><div class="ev-time-col">${x(e.time)}</div><div class="ev-content"><div class="ev-name">${x(e.name)}</div></div></div>`).join('')
-        :'<div style="padding:16px;text-align:center;color:var(--muted);font-size:12px">No events yet.</div>'}
-    </div>
-  </div>`).join('');
+  const cols=Math.min(days.length,4);grid.style.gridTemplateColumns=`repeat(${cols},1fr)`;
+  grid.innerHTML=days.map(day=>`<div class="day-col"><div class="day-head"><span class="day-badge">Day ${day.dayNum}</span><div class="day-name">${x(day.name)}</div><div class="day-date-text">${x(day.date)}</div></div><div class="event-list">${day.events.length?day.events.map(e=>`<div class="ev"><div class="ev-time-col">${x(e.time)}</div><div class="ev-content"><div class="ev-name">${x(e.name)}</div></div></div>`).join(''):'<div style="padding:16px;text-align:center;color:var(--muted);font-size:12px">No events yet.</div>'}</div></div>`).join('');
   const sub=document.getElementById('schedule-subtitle');
   if(sub&&days.length>=2)sub.textContent=`SAS 4-DAY RETREAT · ${days[0].date.toUpperCase()} – ${days[days.length-1].date.toUpperCase()} · ABU ZARIA`;
 }
-
-// Admin itinerary
 let selectedDayId=null,editingEventId=null;
 function renderItineraryDayList(){
   const wrap=document.getElementById('itin-day-list');if(!wrap)return;
   const days=getItinerary();
   if(!days.length){wrap.innerHTML='<div style="text-align:center;padding:20px;color:var(--muted);font-size:12px">No days yet.</div>';return;}
-  wrap.innerHTML=days.map(d=>`<div class="itin-day-row ${selectedDayId===d.id?'selected':''}" onclick="selectDay('${d.id}')">
-    <div class="itin-day-row-left">
-      <span class="itin-day-num">D${d.dayNum}</span>
-      <div>
-        <div class="itin-day-row-name">${x(d.name)}</div>
-        <div class="itin-day-row-date">${x(d.date)} · ${d.events.length} event${d.events.length!==1?'s':''}</div>
-      </div>
-    </div>
-    <div class="itin-day-actions">
-      <button class="itin-day-edit-btn" onclick="event.stopPropagation();openEditDayModal('${d.id}')">✏</button>
-      <button class="itin-day-del-btn" onclick="event.stopPropagation();deleteDay('${d.id}')">🗑</button>
-    </div>
-  </div>`).join('');
+  wrap.innerHTML=days.map(d=>`<div class="itin-day-row ${selectedDayId===d.id?'selected':''}" onclick="selectDay('${d.id}')"><div class="itin-day-row-left"><span class="itin-day-num">D${d.dayNum}</span><div><div class="itin-day-row-name">${x(d.name)}</div><div class="itin-day-row-date">${x(d.date)} · ${d.events.length} event${d.events.length!==1?'s':''}</div></div></div><div class="itin-day-actions"><button class="itin-day-edit-btn" onclick="event.stopPropagation();openEditDayModal('${d.id}')">✏</button><button class="itin-day-del-btn" onclick="event.stopPropagation();deleteDay('${d.id}')">🗑</button></div></div>`).join('');
 }
 function selectDay(dayId){selectedDayId=dayId;renderItineraryDayList();renderDayDetail(dayId);}
 function renderDayDetail(dayId){
   const detail=document.getElementById('itin-day-detail');
   const day=getItinerary().find(d=>d.id===dayId);
   if(!day||!detail)return;
-  detail.innerHTML=`<div class="itin-day-title-row"><div>
-    <div class="itin-day-title">Day ${day.dayNum} — ${x(day.name)}</div>
-    <div class="itin-day-date-sub">${x(day.date)}</div>
-  </div></div>
-  ${day.events.length?day.events.map((e,i)=>`<div class="itin-ev-row">
-    <div class="itin-ev-time">${x(e.time)}</div>
-    <div class="itin-ev-dot"></div>
-    <div class="itin-ev-name">${x(e.name)}</div>
-    <div class="itin-ev-actions">
-      ${i>0?`<button class="itin-ev-move" onclick="moveEvent('${dayId}','${e.id}',-1)">↑</button>`:''}
-      ${i<day.events.length-1?`<button class="itin-ev-move" onclick="moveEvent('${dayId}','${e.id}',1)">↓</button>`:''}
-      <button class="itin-ev-edit" onclick="startEditEvent('${dayId}','${e.id}')">✏ Edit</button>
-      <button class="itin-ev-del" onclick="deleteEvent('${dayId}','${e.id}')">🗑</button>
-    </div>
-  </div>`).join(''):'<div style="padding:20px 0;text-align:center;color:var(--muted);font-size:13px">No events yet. Add one on the left.</div>'}`;
+  detail.innerHTML=`<div class="itin-day-title-row"><div><div class="itin-day-title">Day ${day.dayNum} — ${x(day.name)}</div><div class="itin-day-date-sub">${x(day.date)}</div></div></div>${day.events.length?day.events.map((e,i)=>`<div class="itin-ev-row"><div class="itin-ev-time">${x(e.time)}</div><div class="itin-ev-dot"></div><div class="itin-ev-name">${x(e.name)}</div><div class="itin-ev-actions">${i>0?`<button class="itin-ev-move" onclick="moveEvent('${dayId}','${e.id}',-1)">↑</button>`:''}${i<day.events.length-1?`<button class="itin-ev-move" onclick="moveEvent('${dayId}','${e.id}',1)">↓</button>`:''}<button class="itin-ev-edit" onclick="startEditEvent('${dayId}','${e.id}')">✏ Edit</button><button class="itin-ev-del" onclick="deleteEvent('${dayId}','${e.id}')">🗑</button></div></div>`).join(''):'<div style="padding:20px 0;text-align:center;color:var(--muted);font-size:13px">No events yet. Add one on the left.</div>'}`;
 }
 
-// ═══ CLOUD / SHEETDB ═══
-const GAS_URL='https://script.google.com/macros/s/AKfycbwhWltBPEqWA7FqWkqdKAe8SpWeRBsx2DL1wqh0KJ9ZvLdtqz7YYyZLk__KbZx-TJNw/exec';
-let studentsCache=null;
+// ═══ GAS / CLOUD ═══
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbwhWltBPEqWA7FqWkqdKAe8SpWeRBsx2DL1wqh0KJ9ZvLdtqz7YYyZLk__KbZx-TJNw/exec';
+let studentsCache = null;
 
-async function fetchStudents(){
-  try{
-    const res = await fetch(GAS_URL);
-    if(!res.ok){ console.error('GAS fetch failed:', res.status); return studentsCache||[]; }
-    const data = await res.json();
-    if(!Array.isArray(data)){ console.error('GAS returned unexpected data:', data); return studentsCache||[]; }
+// Uses a JSONP-style approach via a hidden iframe to avoid CORS issues,
+// but the cleanest fix is to append ?callback or use a proxy.
+// We use no-cors for the POST (fire-and-forget) and a direct fetch for GET.
+async function fetchStudents() {
+  const banner = document.getElementById('gas-error-banner');
+  try {
+    const res = await fetch(GAS_URL, {
+      method: 'GET',
+      redirect: 'follow',
+    });
+    const text = await res.text();
+    // GAS sometimes returns HTML error pages — check before parsing
+    if (!text || text.trim().startsWith('<')) {
+      throw new Error('GAS returned HTML instead of JSON — check deployment settings.');
+    }
+    const data = JSON.parse(text);
+    if (!Array.isArray(data)) {
+      throw new Error('GAS returned unexpected format: ' + JSON.stringify(data).slice(0, 100));
+    }
     studentsCache = data;
+    if (banner) banner.style.display = 'none';
     return studentsCache;
-  }catch(err){
-    console.error('GAS fetch error:', err);
-    return studentsCache||[];
+  } catch (err) {
+    console.error('fetchStudents error:', err.message);
+    if (banner) banner.style.display = 'block';
+    return studentsCache || [];
   }
 }
 
-async function addStudentCloud(s){
-  s.id = Date.now()+Math.random().toString(36).slice(2);
-  s.status = 'pending';
-  s.registeredAt = new Date().toLocaleString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  let receiptUrl = 'None';
-  if(s.receipt){ const up = await uploadReceiptToImgBB(s.receipt); receiptUrl = up||'Upload failed'; }
-  const row = {
-    id:           s.id,
-    name:         s.name,
-    regNo:        s.regNo,
-    level:        s.level,
-    gender:       s.gender,
-    phone:        s.phone,
-    email:        s.email||'',
-    emergency:    s.emergency||'',
-    status:       s.status,
-    registeredAt: s.registeredAt,
-    receipt:      receiptUrl
-  };
-  try{
+async function gasPost(payload) {
+  // GAS requires no-cors for cross-origin POST from a browser file,
+  // OR the script must set CORS headers. We send as text/plain (triggers simple request).
+  try {
     const res = await fetch(GAS_URL, {
       method: 'POST',
-      headers: {'Content-Type':'text/plain'},
-      body: JSON.stringify({action:'insert', data:row})
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(payload),
     });
-    const result = await res.json();
-    if(result.created === 1){
-      if(!studentsCache) studentsCache=[];
+    const text = await res.text();
+    if (!text || text.trim().startsWith('<')) {
+      throw new Error('GAS returned HTML — deployment may need re-publishing.');
+    }
+    return JSON.parse(text);
+  } catch (err) {
+    console.error('gasPost error:', err.message);
+    throw err;
+  }
+}
+
+async function addStudentCloud(s) {
+  s.id = Date.now() + Math.random().toString(36).slice(2);
+  s.status = 'pending';
+  s.registeredAt = new Date().toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  let receiptUrl = 'None';
+  if (s.receipt) {
+    const up = await uploadReceiptToImgBB(s.receipt);
+    receiptUrl = up || 'Upload failed';
+  }
+  const row = {
+    id: s.id, name: s.name, regNo: s.regNo, level: s.level,
+    gender: s.gender, phone: s.phone, email: s.email || '',
+    emergency: s.emergency || '', status: s.status,
+    registeredAt: s.registeredAt, receipt: receiptUrl
+  };
+  try {
+    const result = await gasPost({ action: 'insert', data: row });
+    if (result.created === 1) {
+      if (!studentsCache) studentsCache = [];
       studentsCache.unshift(row);
-      if(s.email) sendRegistrationEmail(row);
+      if (s.email) sendRegistrationEmail(row);
     } else {
       console.error('GAS did not confirm save:', result);
       alert('Registration may not have saved. Please try again.');
     }
-  }catch(err){
+  } catch (err) {
     console.error('GAS POST error:', err);
     alert('Could not connect to database. Check your internet and try again.');
   }
   return row;
 }
 
-async function setStatusCloud(id, st){
-  try{
-    const res = await fetch(GAS_URL, {
-      method: 'POST',
-      headers: {'Content-Type':'text/plain'},
-      body: JSON.stringify({action:'patch', id, status:st})
-    });
-    const result = await res.json();
-    console.log('GAS PATCH result:', result);
-  }catch(err){ console.error('GAS PATCH error:', err); }
-  if(studentsCache){
-    const s = studentsCache.find(r=>r.id===id);
-    if(s){ s.status=st; sendStatusEmail(s, st); }
+async function setStatusCloud(id, st) {
+  try {
+    await gasPost({ action: 'patch', id, status: st });
+  } catch (err) { console.error('GAS PATCH error:', err); }
+  if (studentsCache) {
+    const s = studentsCache.find(r => r.id === id);
+    if (s) { s.status = st; sendStatusEmail(s, st); }
   }
 }
 
-async function delStudentCloud(id){
-  try{
-    await fetch(GAS_URL, {
-      method: 'POST',
-      headers: {'Content-Type':'text/plain'},
-      body: JSON.stringify({action:'delete', id})
-    });
-  }catch(err){ console.error('GAS DELETE error:', err); }
-  if(studentsCache) studentsCache = studentsCache.filter(r=>r.id!==id);
+async function delStudentCloud(id) {
+  try {
+    await gasPost({ action: 'delete', id });
+  } catch (err) { console.error('GAS DELETE error:', err); }
+  if (studentsCache) studentsCache = studentsCache.filter(r => r.id !== id);
+}
+
+// ImgBB upload (needed for receipts)
+async function uploadReceiptToImgBB(dataURL) {
+  try {
+    const base64 = dataURL.split(',')[1];
+    const fd = new FormData();
+    fd.append('image', base64);
+    // Use your own ImgBB key if you have one, otherwise receipts will show as "Upload failed"
+    const res = await fetch('https://api.imgbb.com/1/upload?key=YOUR_IMGBB_KEY', { method: 'POST', body: fd });
+    const json = await res.json();
+    return json?.data?.url || null;
+  } catch (e) {
+    console.error('ImgBB upload failed:', e);
+    return null;
+  }
 }
 
 // ═══ NAV ═══
-function showPage(name){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-link').forEach(n=>n.classList.remove('active'));
-  const page=document.getElementById('page-'+name);if(page)page.classList.add('active');
-  const navLink=document.getElementById('nav-'+name);if(navLink)navLink.classList.add('active');
-  window.scrollTo(0,0);
-  if(name==='admin'){refreshStats();renderStudents();switchAdminSection('students');}
-  if(name==='updates')renderPublicUpdates();
-  if(name==='schedule')renderPublicSchedule();
-  if(name==='changepw'){
-    ['cp-current','cp-new','cp-confirm'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
-    document.getElementById('cp-err').style.display='none';
-    document.getElementById('cp-success').style.display='none';
-    document.getElementById('pw-strength-bar').style.display='none';
-    document.getElementById('pw-strength-label').textContent='';
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+  const page = document.getElementById('page-' + name); if (page) page.classList.add('active');
+  const navLink = document.getElementById('nav-' + name); if (navLink) navLink.classList.add('active');
+  window.scrollTo(0, 0);
+  if (name === 'admin') { refreshStats(); renderStudents(); switchAdminSection('students'); }
+  if (name === 'updates') renderPublicUpdates();
+  if (name === 'schedule') renderPublicSchedule();
+  if (name === 'changepw') {
+    ['cp-current', 'cp-new', 'cp-confirm'].forEach(id => { const e = document.getElementById(id); if (e) e.value = ''; });
+    document.getElementById('cp-err').style.display = 'none';
+    document.getElementById('cp-success').style.display = 'none';
+    document.getElementById('pw-strength-bar').style.display = 'none';
+    document.getElementById('pw-strength-label').textContent = '';
   }
-  const hideNav=['admin','admin-login','changepw'].includes(name);
-  document.getElementById('topnav').style.display=hideNav?'none':'';
+  const hideNav = ['admin', 'admin-login', 'changepw'].includes(name);
+  document.getElementById('topnav').style.display = hideNav ? 'none' : '';
 }
-window.addEventListener('scroll',()=>{document.getElementById('topnav').classList.toggle('scrolled',window.scrollY>10);});
+window.addEventListener('scroll', () => { document.getElementById('topnav').classList.toggle('scrolled', window.scrollY > 10); });
 
 // ═══ AUTH ═══
-const PW_KEY='sas_retreat_admin_pw';
-function getAdminPw(){return localStorage.getItem(PW_KEY)||'1234567890';}
-function doAdminLogin(){
-  const pw=document.getElementById('admin-login-pw').value;
-  const err=document.getElementById('admin-login-err');
-  if(pw===getAdminPw()){err.style.display='none';document.getElementById('admin-login-pw').value='';showPage('admin');}
-  else{err.style.display='block';const inp=document.getElementById('admin-login-pw');inp.style.borderColor='#dc2626';inp.style.animation='shake .35s ease';setTimeout(()=>{inp.style.animation='';inp.style.borderColor='';},400);}
+const PW_KEY = 'sas_retreat_admin_pw';
+function getAdminPw() { return localStorage.getItem(PW_KEY) || '1234567890'; }
+function doAdminLogin() {
+  const pw = document.getElementById('admin-login-pw').value;
+  const err = document.getElementById('admin-login-err');
+  if (pw === getAdminPw()) { err.style.display = 'none'; document.getElementById('admin-login-pw').value = ''; showPage('admin'); }
+  else { err.style.display = 'block'; const inp = document.getElementById('admin-login-pw'); inp.style.borderColor = '#dc2626'; inp.style.animation = 'shake .35s ease'; setTimeout(() => { inp.style.animation = ''; inp.style.borderColor = ''; }, 400); }
 }
-function togglePwVis(inputId,btn){const inp=document.getElementById(inputId);inp.type=inp.type==='password'?'text':'password';btn.style.color=inp.type==='text'?'var(--orange)':'#aaa';}
-function adminLogout(){showPage('home');}
-function changePassword(){
-  const current=document.getElementById('cp-current').value;
-  const newPw=document.getElementById('cp-new').value.trim();
-  const confirm=document.getElementById('cp-confirm').value;
-  const err=document.getElementById('cp-err');const suc=document.getElementById('cp-success');
-  err.style.display='none';suc.style.display='none';
-  if(current!==getAdminPw()){err.textContent='Current password is incorrect.';err.style.display='block';return;}
-  if(newPw.length<6){err.textContent='New password must be at least 6 characters.';err.style.display='block';return;}
-  if(newPw!==confirm){err.textContent='Passwords do not match.';err.style.display='block';return;}
-  localStorage.setItem(PW_KEY,newPw);suc.style.display='block';
-  ['cp-current','cp-new','cp-confirm'].forEach(id=>{document.getElementById(id).value='';});
-  document.getElementById('pw-strength-bar').style.display='none';document.getElementById('pw-strength-label').textContent='';
-  setTimeout(()=>{showPage('admin');},1500);
+function togglePwVis(inputId, btn) { const inp = document.getElementById(inputId); inp.type = inp.type === 'password' ? 'text' : 'password'; btn.style.color = inp.type === 'text' ? 'var(--orange)' : '#aaa'; }
+function adminLogout() { showPage('home'); }
+function changePassword() {
+  const current = document.getElementById('cp-current').value;
+  const newPw = document.getElementById('cp-new').value.trim();
+  const confirm = document.getElementById('cp-confirm').value;
+  const err = document.getElementById('cp-err'); const suc = document.getElementById('cp-success');
+  err.style.display = 'none'; suc.style.display = 'none';
+  if (current !== getAdminPw()) { err.textContent = 'Current password is incorrect.'; err.style.display = 'block'; return; }
+  if (newPw.length < 6) { err.textContent = 'New password must be at least 6 characters.'; err.style.display = 'block'; return; }
+  if (newPw !== confirm) { err.textContent = 'Passwords do not match.'; err.style.display = 'block'; return; }
+  localStorage.setItem(PW_KEY, newPw); suc.style.display = 'block';
+  ['cp-current', 'cp-new', 'cp-confirm'].forEach(id => { document.getElementById(id).value = ''; });
+  document.getElementById('pw-strength-bar').style.display = 'none'; document.getElementById('pw-strength-label').textContent = '';
+  setTimeout(() => { showPage('admin'); }, 1500);
 }
-function checkPwStrength(pw){
-  const bar=document.getElementById('pw-strength-bar');const lbl=document.getElementById('pw-strength-label');
-  if(!pw){bar.style.display='none';lbl.textContent='';return;}bar.style.display='block';
-  let score=0;if(pw.length>=6)score++;if(pw.length>=10)score++;if(/[A-Z]/.test(pw))score++;if(/[0-9]/.test(pw))score++;if(/[^A-Za-z0-9]/.test(pw))score++;
-  const levels=[{w:'20%',bg:'#ef4444',t:'WEAK'},{w:'40%',bg:'#f97316',t:'FAIR'},{w:'60%',bg:'#f59e0b',t:'MODERATE'},{w:'80%',bg:'#84cc16',t:'STRONG'},{w:'100%',bg:'#10b981',t:'VERY STRONG'}];
-  const l=levels[Math.min(score,levels.length)-1]||levels[0];
-  document.getElementById('pw-strength-fill').style.cssText=`width:${l.w};background:${l.bg};height:100%;transition:width .3s,background .3s`;
-  lbl.textContent=l.t;lbl.style.color=l.bg;
+function checkPwStrength(pw) {
+  const bar = document.getElementById('pw-strength-bar'); const lbl = document.getElementById('pw-strength-label');
+  if (!pw) { bar.style.display = 'none'; lbl.textContent = ''; return; } bar.style.display = 'block';
+  let score = 0; if (pw.length >= 6) score++; if (pw.length >= 10) score++; if (/[A-Z]/.test(pw)) score++; if (/[0-9]/.test(pw)) score++; if (/[^A-Za-z0-9]/.test(pw)) score++;
+  const levels = [{ w: '20%', bg: '#ef4444', t: 'WEAK' }, { w: '40%', bg: '#f97316', t: 'FAIR' }, { w: '60%', bg: '#f59e0b', t: 'MODERATE' }, { w: '80%', bg: '#84cc16', t: 'STRONG' }, { w: '100%', bg: '#10b981', t: 'VERY STRONG' }];
+  const l = levels[Math.min(score, levels.length) - 1] || levels[0];
+  document.getElementById('pw-strength-fill').style.cssText = `width:${l.w};background:${l.bg};height:100%;transition:width .3s,background .3s`;
+  lbl.textContent = l.t; lbl.style.color = l.bg;
 }
 
 // ═══ ADMIN DASHBOARD ═══
-let adminFilter='all';
-function setAdminTab(f,el){adminFilter=f;document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');renderStudents();}
-function switchAdminSection(name){
-  ['students','updates','itinerary'].forEach(s=>{
-    const el=document.getElementById('admin-section-'+s);if(el)el.style.display=s===name?'':'none';
-    const tab=document.getElementById('ast-'+s);if(tab)tab.classList.toggle('active',s===name);
+let adminFilter = 'all';
+function setAdminTab(f, el) { adminFilter = f; document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active')); el.classList.add('active'); renderStudents(); }
+function switchAdminSection(name) {
+  ['students', 'updates', 'itinerary'].forEach(s => {
+    const el = document.getElementById('admin-section-' + s); if (el) el.style.display = s === name ? '' : 'none';
+    const tab = document.getElementById('ast-' + s); if (tab) tab.classList.toggle('active', s === name);
   });
-  if(name==='updates'){renderAdminUpdates();renderPublicUpdates();}
-  if(name==='itinerary')renderItineraryDayList();
+  if (name === 'updates') { renderAdminUpdates(); renderPublicUpdates(); }
+  if (name === 'itinerary') renderItineraryDayList();
 }
-function refreshStats(list){
-  if(!list)list=studentsCache||[];
-  document.getElementById('stat-total').textContent=list.length;
-  document.getElementById('stat-pending').textContent=list.filter(s=>s.status==='pending').length;
-  document.getElementById('stat-verified').textContent=list.filter(s=>s.status==='verified').length;
-  document.getElementById('stat-rejected').textContent=list.filter(s=>s.status==='rejected').length;
+function refreshStats(list) {
+  if (!list) list = studentsCache || [];
+  document.getElementById('stat-total').textContent = list.length;
+  document.getElementById('stat-pending').textContent = list.filter(s => s.status === 'pending').length;
+  document.getElementById('stat-verified').textContent = list.filter(s => s.status === 'verified').length;
+  document.getElementById('stat-rejected').textContent = list.filter(s => s.status === 'rejected').length;
 }
-async function renderStudents(){
-  const wrap=document.getElementById('admin-list-wrap');if(!wrap)return;
-  wrap.innerHTML=`<div class="empty-state"><div style="display:inline-block;width:32px;height:32px;border:3px solid #f0fdf5;border-top-color:var(--orange);border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:12px"></div><p>Loading registrations…</p></div>`;
-  const all=await fetchStudents();refreshStats(all);
-  const q=(document.getElementById('admin-search')?.value||'').toLowerCase();
-  let list=[...all];
-  if(adminFilter!=='all')list=list.filter(s=>s.status===adminFilter);
-  if(q)list=list.filter(s=>(s.name+s.regNo+s.level+s.phone).toLowerCase().includes(q));
-  if(!list.length){wrap.innerHTML=`<div class="empty-state"><p>No students found.</p></div>`;return;}
-  const bc={pending:'badge-pending',verified:'badge-verified',rejected:'badge-rejected'};
-  wrap.innerHTML=`<table class="students-table"><thead><tr>
+async function renderStudents() {
+  const wrap = document.getElementById('admin-list-wrap'); if (!wrap) return;
+  wrap.innerHTML = `<div class="empty-state"><div style="display:inline-block;width:32px;height:32px;border:3px solid #f0fdf5;border-top-color:var(--orange);border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:12px"></div><p>Loading registrations…</p></div>`;
+  const all = await fetchStudents(); refreshStats(all);
+  const q = (document.getElementById('admin-search')?.value || '').toLowerCase();
+  let list = [...all];
+  if (adminFilter !== 'all') list = list.filter(s => s.status === adminFilter);
+  if (q) list = list.filter(s => (s.name + s.regNo + s.level + s.phone).toLowerCase().includes(q));
+  if (!list.length) { wrap.innerHTML = `<div class="empty-state"><p>No students found.</p></div>`; return; }
+  const bc = { pending: 'badge-pending', verified: 'badge-verified', rejected: 'badge-rejected' };
+  wrap.innerHTML = `<table class="students-table"><thead><tr>
     <th>Student</th><th>Reg No</th><th>Level</th><th>Gender</th><th>Phone</th><th>Email</th><th>Receipt</th><th>Status</th><th>Actions</th>
-  </tr></thead><tbody>${list.map(s=>`<tr>
+  </tr></thead><tbody>${list.map(s => `<tr>
     <td><div class="student-name-td">${x(s.name)}</div><div class="student-meta-td">${x(s.registeredAt)}</div></td>
     <td style="font-family:'JetBrains Mono',monospace;font-size:12px">${x(s.regNo)}</td>
     <td>${x(s.level)}</td><td>${x(s.gender)}</td>
     <td style="font-family:'JetBrains Mono',monospace;font-size:12px">${x(s.phone)}</td>
-    <td style="font-size:12px">${x(s.email||'—')}</td>
-    <td>${(s.receipt&&s.receipt.startsWith('http'))
-      ?`<button onclick="viewReceipt('${x(s.receipt)}')" style="background:var(--orange-light);border:none;padding:5px 11px;font-size:11px;font-weight:700;color:var(--orange);cursor:pointer;font-family:'Manrope',sans-serif">👁 View</button>`
-      :`<span style="color:var(--muted);font-size:11px;font-family:'JetBrains Mono',monospace">${x(s.receipt||'None')}</span>`
+    <td style="font-size:12px">${x(s.email || '—')}</td>
+    <td>${(s.receipt && s.receipt.startsWith('http'))
+      ? `<button onclick="viewReceipt('${x(s.receipt)}')" style="background:var(--orange-light);border:none;padding:5px 11px;font-size:11px;font-weight:700;color:var(--orange);cursor:pointer;font-family:'Manrope',sans-serif">👁 View</button>`
+      : `<span style="color:var(--muted);font-size:11px;font-family:'JetBrains Mono',monospace">${x(s.receipt || 'None')}</span>`
     }</td>
-    <td><span class="status-badge ${bc[s.status]||'badge-pending'}">${x(s.status||'pending')}</span></td>
+    <td><span class="status-badge ${bc[s.status] || 'badge-pending'}">${x(s.status || 'pending')}</span></td>
     <td>
-      ${s.status!=='verified'?`<button class="action-btn btn-verify" onclick="chgStatus('${s.id}','verified',this)">✓ Verify</button>`:''}
-      ${s.status!=='rejected'?`<button class="action-btn btn-reject" onclick="chgStatus('${s.id}','rejected',this)">✕ Reject</button>`:''}
-      ${s.status!=='pending'?`<button class="action-btn btn-set-pending" onclick="chgStatus('${s.id}','pending',this)">↺</button>`:''}
-      ${s.status==='verified'?`<button class="action-btn" onclick="downloadQR(${JSON.stringify(s).replace(/"/g,'&quot;')})" style="background:#ecfdf5;color:#065f46">⬇ QR</button>`:''}
+      ${s.status !== 'verified' ? `<button class="action-btn btn-verify" onclick="chgStatus('${s.id}','verified',this)">✓ Verify</button>` : ''}
+      ${s.status !== 'rejected' ? `<button class="action-btn btn-reject" onclick="chgStatus('${s.id}','rejected',this)">✕ Reject</button>` : ''}
+      ${s.status !== 'pending' ? `<button class="action-btn btn-set-pending" onclick="chgStatus('${s.id}','pending',this)">↺</button>` : ''}
+      ${s.status === 'verified' ? `<button class="action-btn" onclick="downloadQR(${JSON.stringify(s).replace(/"/g, '&quot;')})" style="background:#ecfdf5;color:#065f46">⬇ QR</button>` : ''}
       <button class="action-btn btn-delete" onclick="rmStudent('${s.id}',this)">🗑</button>
     </td>
   </tr>`).join('')}</tbody></table>`;
 }
-async function chgStatus(id,st,btn){if(btn){btn.disabled=true;btn.style.opacity='0.5';}await setStatusCloud(id,st);renderStudents();}
-async function rmStudent(id,btn){if(!confirm('Delete this record? Cannot be undone.'))return;if(btn){btn.disabled=true;btn.style.opacity='0.5';}await delStudentCloud(id);renderStudents();}
-function x(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-async function exportCSV(){
-  const all=studentsCache||await fetchStudents();if(!all.length){alert('No students yet.');return;}
-  const hdr=['Name','Reg No','Level','Gender','Phone','Emergency','Status','Registered At'];
-  const rows=all.map(s=>[s.name,s.regNo,s.level,s.gender,s.phone,s.emergency||'',s.status,s.registeredAt]);
-  const csv=[hdr,...rows].map(r=>r.map(c=>`"${String(c||'').replace(/"/g,'""')}"`).join(',')).join('\n');
-  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='sas_retreat_students.csv';a.click();
+async function chgStatus(id, st, btn) { if (btn) { btn.disabled = true; btn.style.opacity = '0.5'; } await setStatusCloud(id, st); renderStudents(); }
+async function rmStudent(id, btn) { if (!confirm('Delete this record? Cannot be undone.')) return; if (btn) { btn.disabled = true; btn.style.opacity = '0.5'; } await delStudentCloud(id); renderStudents(); }
+function x(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+async function exportCSV() {
+  const all = studentsCache || await fetchStudents(); if (!all.length) { alert('No students yet.'); return; }
+  const hdr = ['Name', 'Reg No', 'Level', 'Gender', 'Phone', 'Emergency', 'Status', 'Registered At'];
+  const rows = all.map(s => [s.name, s.regNo, s.level, s.gender, s.phone, s.emergency || '', s.status, s.registeredAt]);
+  const csv = [hdr, ...rows].map(r => r.map(c => `"${String(c || '').replace(/"/g, '""')}"`).join(',')).join('\n');
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = 'sas_retreat_students.csv'; a.click();
 }
-function viewReceipt(url){if(!url||!url.startsWith('http')){alert('No receipt image available.');return;}document.getElementById('lb-img').src=url;document.getElementById('lightbox').classList.add('open');}
-
-// Download the student's QR code ticket as a PNG
+function viewReceipt(url) { if (!url || !url.startsWith('http')) { alert('No receipt image available.'); return; } document.getElementById('lb-img').src = url; document.getElementById('lightbox').classList.add('open'); }
 async function downloadQR(student) {
   const qrURL = buildQRImageURL(student);
   try {
-    // Fetch image as blob so we can trigger a real file download
-    const res = await fetch(qrURL);
-    const blob = await res.blob();
-    const blobURL = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = blobURL;
-    a.download = `SAS_Ticket_${student.name.replace(/\s+/g,'_')}_${student.regNo}.png`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(blobURL);
-  } catch(err) {
-    // Fallback — open in new tab if direct download fails
-    window.open(qrURL, '_blank');
-  }
+    const res = await fetch(qrURL); const blob = await res.blob(); const blobURL = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = blobURL; a.download = `SAS_Ticket_${student.name.replace(/\s+/g, '_')}_${student.regNo}.png`;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(blobURL);
+  } catch (err) { window.open(qrURL, '_blank'); }
 }
 
 // ═══ REGISTER FORM ═══
-let pendingStudent=null,receiptDataURL=null;
-function submitForm(){
-  const name=document.getElementById('f-name').value.trim();
-  const regNo=document.getElementById('f-reg').value.trim();
-  const level=document.getElementById('f-level').value;
-  const gender=document.getElementById('f-gender').value;
-  const phone=document.getElementById('f-phone').value.trim();
-  const emergency=document.getElementById('f-emergency').value.trim();
-  const email=document.getElementById('f-email').value.trim();
-  let ok=true;
-  [['f-name',name],['f-reg',regNo],['f-level',level],['f-gender',gender],['f-phone',phone],['f-email',email]].forEach(([id,v])=>{
-    if(!v){const e=document.getElementById(id);e.style.borderColor='#dc2626';e.style.animation='shake .35s ease';setTimeout(()=>{e.style.animation='';e.style.borderColor='';},400);ok=false;}
+let pendingStudent = null, receiptDataURL = null;
+function submitForm() {
+  const name = document.getElementById('f-name').value.trim();
+  const regNo = document.getElementById('f-reg').value.trim();
+  const level = document.getElementById('f-level').value;
+  const gender = document.getElementById('f-gender').value;
+  const phone = document.getElementById('f-phone').value.trim();
+  const emergency = document.getElementById('f-emergency').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  let ok = true;
+  [['f-name', name], ['f-reg', regNo], ['f-level', level], ['f-gender', gender], ['f-phone', phone], ['f-email', email]].forEach(([id, v]) => {
+    if (!v) { const e = document.getElementById(id); e.style.borderColor = '#dc2626'; e.style.animation = 'shake .35s ease'; setTimeout(() => { e.style.animation = ''; e.style.borderColor = ''; }, 400); ok = false; }
   });
-  if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-    const e=document.getElementById('f-email');e.style.borderColor='#dc2626';e.style.animation='shake .35s ease';
-    setTimeout(()=>{e.style.animation='';e.style.borderColor='';},400);ok=false;
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    const e = document.getElementById('f-email'); e.style.borderColor = '#dc2626'; e.style.animation = 'shake .35s ease';
+    setTimeout(() => { e.style.animation = ''; e.style.borderColor = ''; }, 400); ok = false;
   }
-  if(!ok)return;
-  pendingStudent={name,regNo,level,gender,phone,emergency,email};receiptDataURL=null;
-  document.getElementById('pay-narration').textContent=`SAS Retreat — ${name}`;
-  document.getElementById('receipt-file').value='';
-  document.getElementById('receipt-preview').style.display='none';
-  document.getElementById('upload-badge').style.display='none';
-  document.getElementById('receipt-err').style.display='none';
-  document.getElementById('upload-zone').style.display='';
-  document.getElementById('step1-content').style.display='none';
-  document.getElementById('step2-content').style.display='';
-  document.getElementById('si-step1').classList.remove('active');document.getElementById('si-step1').classList.add('done');
+  if (!ok) return;
+  pendingStudent = { name, regNo, level, gender, phone, emergency, email }; receiptDataURL = null;
+  document.getElementById('pay-narration').textContent = `SAS Retreat — ${name}`;
+  document.getElementById('receipt-file').value = '';
+  document.getElementById('receipt-preview').style.display = 'none';
+  document.getElementById('upload-badge').style.display = 'none';
+  document.getElementById('receipt-err').style.display = 'none';
+  document.getElementById('upload-zone').style.display = '';
+  document.getElementById('step1-content').style.display = 'none';
+  document.getElementById('step2-content').style.display = '';
+  document.getElementById('si-step1').classList.remove('active'); document.getElementById('si-step1').classList.add('done');
   document.getElementById('si-line1').classList.add('done');
   document.getElementById('si-step2').classList.add('active');
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 }
-function goBackToDetails(){
-  document.getElementById('step1-content').style.display='';
-  document.getElementById('step2-content').style.display='none';
-  document.getElementById('si-step1').classList.add('active');document.getElementById('si-step1').classList.remove('done');
+function goBackToDetails() {
+  document.getElementById('step1-content').style.display = '';
+  document.getElementById('step2-content').style.display = 'none';
+  document.getElementById('si-step1').classList.add('active'); document.getElementById('si-step1').classList.remove('done');
   document.getElementById('si-line1').classList.remove('done');
   document.getElementById('si-step2').classList.remove('active');
 }
-function handleReceiptUpload(input){
-  const file=input.files[0];if(!file)return;
-  if(file.size>5*1024*1024){alert('File too large. Max 5MB.');return;}
-  const reader=new FileReader();
-  reader.onload=e=>{
-    receiptDataURL=e.target.result;
-    if(file.type.startsWith('image/')){document.getElementById('receipt-img').src=receiptDataURL;document.getElementById('receipt-preview').style.display='block';}
-    document.getElementById('upload-zone').style.display='none';
-    document.getElementById('upload-badge').style.display='flex';
-    document.getElementById('receipt-err').style.display='none';
+function handleReceiptUpload(input) {
+  const file = input.files[0]; if (!file) return;
+  if (file.size > 5 * 1024 * 1024) { alert('File too large. Max 5MB.'); return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    receiptDataURL = e.target.result;
+    if (file.type.startsWith('image/')) { document.getElementById('receipt-img').src = receiptDataURL; document.getElementById('receipt-preview').style.display = 'block'; }
+    document.getElementById('upload-zone').style.display = 'none';
+    document.getElementById('upload-badge').style.display = 'flex';
+    document.getElementById('receipt-err').style.display = 'none';
   };
   reader.readAsDataURL(file);
 }
-function removeReceipt(){
-  receiptDataURL=null;document.getElementById('receipt-file').value='';
-  document.getElementById('receipt-preview').style.display='none';
-  document.getElementById('upload-badge').style.display='none';
-  document.getElementById('upload-zone').style.display='';
+function removeReceipt() {
+  receiptDataURL = null; document.getElementById('receipt-file').value = '';
+  document.getElementById('receipt-preview').style.display = 'none';
+  document.getElementById('upload-badge').style.display = 'none';
+  document.getElementById('upload-zone').style.display = '';
 }
-function copyAcct(){
-  navigator.clipboard.writeText('8143345632').then(()=>{
-    const btn=document.getElementById('copy-acct-btn');btn.textContent='✓ Copied!';btn.classList.add('copied');
-    setTimeout(()=>{btn.innerHTML=`<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy`;btn.classList.remove('copied');},2000);
-  }).catch(()=>{alert('Account number: 8143345632');});
+function copyAcct() {
+  navigator.clipboard.writeText('8143345632').then(() => {
+    const btn = document.getElementById('copy-acct-btn'); btn.textContent = '✓ Copied!'; btn.classList.add('copied');
+    setTimeout(() => { btn.innerHTML = `<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy`; btn.classList.remove('copied'); }, 2000);
+  }).catch(() => { alert('Account number: 8143345632'); });
 }
-async function submitPayment(){
-  if(!receiptDataURL){
-    const err=document.getElementById('receipt-err');err.style.display='block';
-    const zone=document.getElementById('upload-zone');zone.style.borderColor='#dc2626';zone.style.animation='shake .35s ease';
-    setTimeout(()=>{zone.style.animation='';zone.style.borderColor='';},400);return;
+async function submitPayment() {
+  if (!receiptDataURL) {
+    const err = document.getElementById('receipt-err'); err.style.display = 'block';
+    const zone = document.getElementById('upload-zone'); zone.style.borderColor = '#dc2626'; zone.style.animation = 'shake .35s ease';
+    setTimeout(() => { zone.style.animation = ''; zone.style.borderColor = ''; }, 400); return;
   }
-  if(pendingStudent){
-    const btn=document.querySelector('#step2-content .btn-next');
-    const sp='<span style="display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.35);border-top-color:white;border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle;margin-left:8px"></span>';
-    if(btn){btn.disabled=true;btn.innerHTML='Uploading receipt…'+sp;}
-    await addStudentCloud({...pendingStudent,receipt:receiptDataURL});
-    document.getElementById('success-msg').textContent=`Thank you, ${pendingStudent.name.split(' ')[0]}! Your registration and receipt have been submitted for verification.`;
-    pendingStudent=null;receiptDataURL=null;if(btn)btn.disabled=false;
+  if (pendingStudent) {
+    const btn = document.querySelector('#step2-content .btn-next');
+    const sp = '<span style="display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.35);border-top-color:white;border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle;margin-left:8px"></span>';
+    if (btn) { btn.disabled = true; btn.innerHTML = 'Uploading receipt…' + sp; }
+    await addStudentCloud({ ...pendingStudent, receipt: receiptDataURL });
+    document.getElementById('success-msg').textContent = `Thank you, ${pendingStudent.name.split(' ')[0]}! Your registration and receipt have been submitted for verification.`;
+    pendingStudent = null; receiptDataURL = null; if (btn) btn.disabled = false;
   }
   showPage('success');
 }
-function registerAnother(){
-  ['f-name','f-reg','f-level','f-gender','f-phone','f-emergency','f-email'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
-  pendingStudent=null;receiptDataURL=null;
-  document.getElementById('step1-content').style.display='';document.getElementById('step2-content').style.display='none';
-  document.getElementById('si-step1').classList.add('active');document.getElementById('si-step1').classList.remove('done');
-  document.getElementById('si-line1').classList.remove('done');document.getElementById('si-step2').classList.remove('active');
+function registerAnother() {
+  ['f-name', 'f-reg', 'f-level', 'f-gender', 'f-phone', 'f-emergency', 'f-email'].forEach(id => { const e = document.getElementById(id); if (e) e.value = ''; });
+  pendingStudent = null; receiptDataURL = null;
+  document.getElementById('step1-content').style.display = ''; document.getElementById('step2-content').style.display = 'none';
+  document.getElementById('si-step1').classList.add('active'); document.getElementById('si-step1').classList.remove('done');
+  document.getElementById('si-line1').classList.remove('done'); document.getElementById('si-step2').classList.remove('active');
   showPage('register');
 }
 
 // ═══ DAY MODAL ═══
-function addDay(){openEditDayModal(null);}
-function openEditDayModal(dayId){
-  const days=getItinerary();const day=dayId?days.find(d=>d.id===dayId):null;const nextNum=days.length+1;
-  const existing=document.getElementById('itin-day-modal');if(existing)existing.remove();
-  const modal=document.createElement('div');modal.className='itin-modal-overlay';modal.id='itin-day-modal';
-  modal.innerHTML=`<div class="itin-modal">
-    <div class="itin-modal-title">${day?'Edit Day':'Add New Day'}</div>
-    <div class="field-group"><div class="field-label">Day Number <span class="required">*</span></div>
-      <input class="field-input" type="number" id="im-daynum" min="1" value="${day?day.dayNum:nextNum}"></div>
-    <div class="field-group"><div class="field-label">Day Title <span class="required">*</span></div>
-      <input class="field-input" type="text" id="im-dayname" placeholder="e.g. Opening Day" value="${day?x(day.name):''}"></div>
-    <div class="field-group"><div class="field-label">Date <span class="required">*</span></div>
-      <input class="field-input" type="text" id="im-daydate" placeholder="e.g. Apr 17, 2026" value="${day?x(day.date):''}"></div>
-    <div style="display:flex;gap:10px;margin-top:6px">
-      <button class="btn-next" onclick="saveDayModal('${dayId||''}')">${day?'Save Changes →':'Add Day →'}</button>
-      <button onclick="document.getElementById('itin-day-modal').remove()" style="flex:none;padding:14px 20px;border:2px solid var(--border);background:white;font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;cursor:pointer;color:var(--muted)">Cancel</button>
-    </div>
+function addDay() { openEditDayModal(null); }
+function openEditDayModal(dayId) {
+  const days = getItinerary(); const day = dayId ? days.find(d => d.id === dayId) : null; const nextNum = days.length + 1;
+  const existing = document.getElementById('itin-day-modal'); if (existing) existing.remove();
+  const modal = document.createElement('div'); modal.className = 'itin-modal-overlay'; modal.id = 'itin-day-modal';
+  modal.innerHTML = `<div class="itin-modal"><div class="itin-modal-title">${day ? 'Edit Day' : 'Add New Day'}</div>
+    <div class="field-group"><div class="field-label">Day Number <span class="required">*</span></div><input class="field-input" type="number" id="im-daynum" min="1" value="${day ? day.dayNum : nextNum}"></div>
+    <div class="field-group"><div class="field-label">Day Title <span class="required">*</span></div><input class="field-input" type="text" id="im-dayname" placeholder="e.g. Opening Day" value="${day ? x(day.name) : ''}"></div>
+    <div class="field-group"><div class="field-label">Date <span class="required">*</span></div><input class="field-input" type="text" id="im-daydate" placeholder="e.g. Apr 17, 2026" value="${day ? x(day.date) : ''}"></div>
+    <div style="display:flex;gap:10px;margin-top:6px"><button class="btn-next" onclick="saveDayModal('${dayId || ''}')">${day ? 'Save Changes →' : 'Add Day →'}</button><button onclick="document.getElementById('itin-day-modal').remove()" style="flex:none;padding:14px 20px;border:2px solid var(--border);background:white;font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;cursor:pointer;color:var(--muted)">Cancel</button></div>
   </div>`;
   document.body.appendChild(modal);
-  modal.addEventListener('click',e=>{if(e.target===modal)modal.remove();});
-  setTimeout(()=>document.getElementById('im-dayname').focus(),50);
+  modal.addEventListener('click', e => { if (e.target === modal) modal.remove(); });
+  setTimeout(() => document.getElementById('im-dayname').focus(), 50);
 }
-function saveDayModal(dayId){
-  const dayNum=parseInt(document.getElementById('im-daynum').value);
-  const name=document.getElementById('im-dayname').value.trim();
-  const date=document.getElementById('im-daydate').value.trim();
-  if(!name||!date||isNaN(dayNum)){['im-dayname','im-daydate','im-daynum'].forEach(id=>{const el=document.getElementById(id);if(!el.value.trim()){el.style.borderColor='#dc2626';setTimeout(()=>{el.style.borderColor='';},1000);}});return;}
-  const days=getItinerary();
-  if(dayId){const d=days.find(d=>d.id===dayId);if(d){d.dayNum=dayNum;d.name=name;d.date=date;}}
-  else{days.push({id:'d'+Date.now(),dayNum,name,date,events:[]});days.sort((a,b)=>a.dayNum-b.dayNum);}
-  saveItinerary(days);document.getElementById('itin-day-modal').remove();renderItineraryDayList();renderPublicSchedule();
+function saveDayModal(dayId) {
+  const dayNum = parseInt(document.getElementById('im-daynum').value);
+  const name = document.getElementById('im-dayname').value.trim();
+  const date = document.getElementById('im-daydate').value.trim();
+  if (!name || !date || isNaN(dayNum)) { ['im-dayname', 'im-daydate', 'im-daynum'].forEach(id => { const el = document.getElementById(id); if (!el.value.trim()) { el.style.borderColor = '#dc2626'; setTimeout(() => { el.style.borderColor = ''; }, 1000); } }); return; }
+  const days = getItinerary();
+  if (dayId) { const d = days.find(d => d.id === dayId); if (d) { d.dayNum = dayNum; d.name = name; d.date = date; } }
+  else { days.push({ id: 'd' + Date.now(), dayNum, name, date, events: [] }); days.sort((a, b) => a.dayNum - b.dayNum); }
+  saveItinerary(days); document.getElementById('itin-day-modal').remove(); renderItineraryDayList(); renderPublicSchedule();
 }
-function deleteDay(dayId){
-  const day=getItinerary().find(d=>d.id===dayId);
-  if(!confirm(`Delete Day ${day?.dayNum} — "${day?.name}"? All events will be lost.`))return;
-  saveItinerary(getItinerary().filter(d=>d.id!==dayId));
-  if(selectedDayId===dayId){selectedDayId=null;document.getElementById('itin-day-detail').innerHTML='<div class="um-empty">Select a day to view its events.</div>';}
-  renderItineraryDayList();renderPublicSchedule();
+function deleteDay(dayId) {
+  const day = getItinerary().find(d => d.id === dayId);
+  if (!confirm(`Delete Day ${day?.dayNum} — "${day?.name}"? All events will be lost.`)) return;
+  saveItinerary(getItinerary().filter(d => d.id !== dayId));
+  if (selectedDayId === dayId) { selectedDayId = null; document.getElementById('itin-day-detail').innerHTML = '<div class="um-empty">Select a day to view its events.</div>'; }
+  renderItineraryDayList(); renderPublicSchedule();
 }
-function submitEvent(){
-  if(!selectedDayId){alert('Please select a day first.');return;}
-  const time=document.getElementById('ie-time').value.trim();const name=document.getElementById('ie-name').value.trim();
-  if(!time||!name){['ie-time','ie-name'].forEach(id=>{const e=document.getElementById(id);if(!e.value.trim()){e.style.borderColor='#dc2626';e.style.animation='shake .35s ease';setTimeout(()=>{e.style.animation='';e.style.borderColor='';},400);}});return;}
-  const days=getItinerary();const day=days.find(d=>d.id===selectedDayId);if(!day)return;
-  if(editingEventId){const ev=day.events.find(e=>e.id===editingEventId);if(ev){ev.time=time;ev.name=name;}editingEventId=null;}
-  else{day.events.push({id:'e'+Date.now(),time,name});}
+function submitEvent() {
+  if (!selectedDayId) { alert('Please select a day first.'); return; }
+  const time = document.getElementById('ie-time').value.trim(); const name = document.getElementById('ie-name').value.trim();
+  if (!time || !name) { ['ie-time', 'ie-name'].forEach(id => { const e = document.getElementById(id); if (!e.value.trim()) { e.style.borderColor = '#dc2626'; e.style.animation = 'shake .35s ease'; setTimeout(() => { e.style.animation = ''; e.style.borderColor = ''; }, 400); } }); return; }
+  const days = getItinerary(); const day = days.find(d => d.id === selectedDayId); if (!day) return;
+  if (editingEventId) { const ev = day.events.find(e => e.id === editingEventId); if (ev) { ev.time = time; ev.name = name; } editingEventId = null; }
+  else { day.events.push({ id: 'e' + Date.now(), time, name }); }
   saveItinerary(days);
-  document.getElementById('ie-time').value='';document.getElementById('ie-name').value='';
-  document.getElementById('ie-submit-btn').textContent='Add Event';document.getElementById('ie-cancel-btn').style.display='none';
-  renderDayDetail(selectedDayId);renderItineraryDayList();renderPublicSchedule();
+  document.getElementById('ie-time').value = ''; document.getElementById('ie-name').value = '';
+  document.getElementById('ie-submit-btn').textContent = 'Add Event'; document.getElementById('ie-cancel-btn').style.display = 'none';
+  renderDayDetail(selectedDayId); renderItineraryDayList(); renderPublicSchedule();
 }
-function startEditEvent(dayId,eventId){
-  selectedDayId=dayId;editingEventId=eventId;
-  const day=getItinerary().find(d=>d.id===dayId);const ev=day?.events.find(e=>e.id===eventId);if(!ev)return;
-  document.getElementById('ie-time').value=ev.time;document.getElementById('ie-name').value=ev.name;
-  document.getElementById('ie-submit-btn').innerHTML='Save Changes';document.getElementById('ie-cancel-btn').style.display='';
-  document.getElementById('itin-event-form-card').scrollIntoView({behavior:'smooth',block:'nearest'});
-  document.getElementById('ie-time').focus();renderItineraryDayList();
+function startEditEvent(dayId, eventId) {
+  selectedDayId = dayId; editingEventId = eventId;
+  const day = getItinerary().find(d => d.id === dayId); const ev = day?.events.find(e => e.id === eventId); if (!ev) return;
+  document.getElementById('ie-time').value = ev.time; document.getElementById('ie-name').value = ev.name;
+  document.getElementById('ie-submit-btn').innerHTML = 'Save Changes'; document.getElementById('ie-cancel-btn').style.display = '';
+  document.getElementById('itin-event-form-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  document.getElementById('ie-time').focus(); renderItineraryDayList();
 }
-function cancelEditEvent(){
-  editingEventId=null;document.getElementById('ie-time').value='';document.getElementById('ie-name').value='';
-  document.getElementById('ie-submit-btn').innerHTML='Add Event';document.getElementById('ie-cancel-btn').style.display='none';
+function cancelEditEvent() {
+  editingEventId = null; document.getElementById('ie-time').value = ''; document.getElementById('ie-name').value = '';
+  document.getElementById('ie-submit-btn').innerHTML = 'Add Event'; document.getElementById('ie-cancel-btn').style.display = 'none';
 }
-function deleteEvent(dayId,eventId){
-  if(!confirm('Remove this event?'))return;
-  const days=getItinerary();const day=days.find(d=>d.id===dayId);if(!day)return;
-  day.events=day.events.filter(e=>e.id!==eventId);saveItinerary(days);renderDayDetail(dayId);renderItineraryDayList();renderPublicSchedule();
+function deleteEvent(dayId, eventId) {
+  if (!confirm('Remove this event?')) return;
+  const days = getItinerary(); const day = days.find(d => d.id === dayId); if (!day) return;
+  day.events = day.events.filter(e => e.id !== eventId); saveItinerary(days); renderDayDetail(dayId); renderItineraryDayList(); renderPublicSchedule();
 }
-function moveEvent(dayId,eventId,dir){
-  const days=getItinerary();const day=days.find(d=>d.id===dayId);if(!day)return;
-  const i=day.events.findIndex(e=>e.id===eventId);const j=i+dir;
-  if(j<0||j>=day.events.length)return;
-  [day.events[i],day.events[j]]=[day.events[j],day.events[i]];
-  saveItinerary(days);renderDayDetail(dayId);renderPublicSchedule();
+function moveEvent(dayId, eventId, dir) {
+  const days = getItinerary(); const day = days.find(d => d.id === dayId); if (!day) return;
+  const i = day.events.findIndex(e => e.id === eventId); const j = i + dir;
+  if (j < 0 || j >= day.events.length) return;
+  [day.events[i], day.events[j]] = [day.events[j], day.events[i]];
+  saveItinerary(days); renderDayDetail(dayId); renderPublicSchedule();
 }
 
-
-// ═══════════════════════════════════════════
-// ── EMAILJS + QR TICKET ──
-// ═══════════════════════════════════════════
-
+// ═══ EMAILJS + QR ═══
 const EMAILJS_PUBLIC_KEY = '8X0bcPPNmYOMB0yg9';
-
-// EmailJS service/template IDs — set these after creating your EmailJS account
-// See setup instructions below
-const EMAILJS_SERVICE  = 'service_qabcfct';
-const EMAILJS_TEMPLATE_CONFIRM  = 'template_m2pnok8';
+const EMAILJS_SERVICE = 'service_qabcfct';
+const EMAILJS_TEMPLATE_CONFIRM = 'template_m2pnok8';
 const EMAILJS_TEMPLATE_VERIFIED = 'template_g49n6rf';
-
-function initEmailJS() {
-  try { emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY }); }
-  catch(e) { console.warn('EmailJS init failed:', e); }
-}
-
-// ── Generate QR code as a hosted URL using QR API service ──
-// Uses goqr.me API — returns a direct image URL that works in emails
+function initEmailJS() { try { emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY }); } catch (e) { console.warn('EmailJS init failed:', e); } }
 function buildQRImageURL(student) {
-  const data = [
-    'SAS 4-DAY RETREAT 2026',
-    `NAME: ${student.name}`,
-    `REG NO: ${student.regNo}`,
-    `LEVEL: ${student.level}`,
-    `PHONE: ${student.phone}`,
-    `TICKET ID: ${student.id}`,
-    'ABU ZARIA - APR 13-15 2026',
-  ].join(' | ');
-  // Encode as URL-safe string
-  const encoded = encodeURIComponent(data);
-  // goqr.me returns a PNG image directly — no upload needed
-  return `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encoded}&bgcolor=ffffff&color=0d1f14&margin=10`;
+  const data = ['SAS 4-DAY RETREAT 2026', `NAME: ${student.name}`, `REG NO: ${student.regNo}`, `LEVEL: ${student.level}`, `PHONE: ${student.phone}`, `TICKET ID: ${student.id}`, 'ABU ZARIA - APR 13-15 2026'].join(' | ');
+  return `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(data)}&bgcolor=ffffff&color=0d1f14&margin=10`;
 }
-
-// ── Send registration confirmation (pending) ──
 async function sendRegistrationEmail(student) {
   if (!student.email) return;
   try {
-    await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_CONFIRM, {
-      to_name:    student.name,
-      to_email:   student.email,
-      reg_no:     student.regNo,
-      level:      student.level,
-      phone:      student.phone,
-      event_name: 'SAS 3-Day Retreat 2026',
-      event_date: '17th – 19th April, 2026',
-      location:   'Ahmadu Bello University, Zaria',
-      ticket_fee: '₦2,600',
-      message:    'Thank you for registering! Your payment receipt has been received and is currently under review. You will receive your QR ticket by email once an organiser verifies your payment.',
-    });
-    console.log('Confirmation email sent to', student.email);
-  } catch(err) {
-    console.warn('Confirmation email failed:', err);
-  }
+    await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_CONFIRM, { to_name: student.name, to_email: student.email, reg_no: student.regNo, level: student.level, phone: student.phone, event_name: 'SAS 3-Day Retreat 2026', event_date: '17th – 19th April, 2026', location: 'Ahmadu Bello University, Zaria', ticket_fee: '₦2,600', message: 'Thank you for registering! Your payment receipt has been received and is currently under review. You will receive your QR ticket by email once an organiser verifies your payment.' });
+  } catch (err) { console.warn('Confirmation email failed:', err); }
 }
-
-// ── Send verified ticket email with QR code ──
 async function sendVerifiedTicketEmail(student) {
   if (!student.email) return;
   try {
-    // Generate a direct QR image URL — no canvas, no upload needed
     const qrImageURL = buildQRImageURL(student);
-    console.log('QR URL:', qrImageURL);
-
-    await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_VERIFIED, {
-      to_name:    student.name,
-      to_email:   student.email,
-      reg_no:     student.regNo,
-      level:      student.level,
-      phone:      student.phone,
-      ticket_id:  student.id,
-      event_name: 'SAS 3-Day Retreat 2026',
-      event_date: '17th – 19th April, 2026',
-      location:   'Ahmadu Bello University, Zaria',
-      ticket_fee: '₦2,600',
-      qr_image:   qrImageURL,
-      qr_link:    qrImageURL,
-      message:    '🎉 Your payment has been verified! Your spot at the SAS 3-Day Retreat 2026 is confirmed. Present the QR code below at the entrance on April 13th. See you there!',
-    });
-    console.log('Verified ticket email sent to', student.email);
-  } catch(err) {
-    console.warn('Verified ticket email failed:', err);
-  }
+    await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_VERIFIED, { to_name: student.name, to_email: student.email, reg_no: student.regNo, level: student.level, phone: student.phone, ticket_id: student.id, event_name: 'SAS 3-Day Retreat 2026', event_date: '17th – 19th April, 2026', location: 'Ahmadu Bello University, Zaria', ticket_fee: '₦2,600', qr_image: qrImageURL, qr_link: qrImageURL, message: '🎉 Your payment has been verified! Your spot at the SAS 3-Day Retreat 2026 is confirmed. Present the QR code below at the entrance. See you there!' });
+  } catch (err) { console.warn('Verified ticket email failed:', err); }
 }
-
-// ── Send rejection email ──
 async function sendRejectedEmail(student) {
   if (!student.email) return;
   try {
-    await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_CONFIRM, {
-      to_name:    student.name,
-      to_email:   student.email,
-      reg_no:     student.regNo,
-      level:      student.level,
-      phone:      student.phone,
-      event_name: 'SAS 3-Day Retreat 2026',
-      event_date: '17th – 19th April, 2026',
-      location:   'Ahmadu Bello University, Zaria',
-      ticket_fee: '₦2,600',
-      message:    'We were unable to verify your payment for the SAS 3-Day Retreat 2026. Please contact the SAS organisers for assistance or re-register with a valid receipt.',
-    });
-    console.log('Rejection email sent to', student.email);
-  } catch(err) {
-    console.warn('Rejection email failed:', err);
-  }
+    await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE_CONFIRM, { to_name: student.name, to_email: student.email, reg_no: student.regNo, level: student.level, phone: student.phone, event_name: 'SAS 3-Day Retreat 2026', event_date: '17th – 19th April, 2026', location: 'Ahmadu Bello University, Zaria', ticket_fee: '₦2,600', message: 'We were unable to verify your payment for the SAS 3-Day Retreat 2026. Please contact the SAS organisers for assistance or re-register with a valid receipt.' });
+  } catch (err) { console.warn('Rejection email failed:', err); }
 }
-
-// ── Handle all status emails (called by chgStatus) ──
 async function sendStatusEmail(student, newStatus) {
   if (!student || !student.email) return;
   if (newStatus === 'verified') await sendVerifiedTicketEmail(student);
